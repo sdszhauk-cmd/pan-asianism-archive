@@ -1,0 +1,631 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Doubled Edge — Pan-Asian Propaganda &amp; the Politics of Ambiguity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="./css2" rel="stylesheet">
+<style>
+:root{--ink:#1a1208;--paper:#f5efe0;--aged:#e8dcc8;--red:#8b1a1a;--gold:#b8860b;--rust:#9c4a1a;--cream:#faf6ed;--dim:#6b5a3e;--rule:#c4a96b;--dark:#120e07;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--paper);color:var(--ink);font-family:'Libre Baskerville',Georgia,serif;font-size:16px;line-height:1.78;overflow-x:hidden;}
+
+/* LANG */
+.lang-bar{position:sticky;top:0;z-index:1000;background:var(--dark);border-bottom:2px solid var(--gold);display:flex;align-items:center;justify-content:space-between;padding:0.6rem 2rem;gap:1rem;}
+.lang-bar-title{font-family:'Space Mono',monospace;font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(245,239,224,0.45);}
+.lang-btns{display:flex;gap:0.4rem;}
+.lang-btn{font-family:'Space Mono',monospace;font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;padding:0.35rem 1rem;border:1px solid rgba(196,169,107,0.4);background:transparent;color:rgba(245,239,224,0.5);cursor:pointer;transition:all 0.2s;}
+.lang-btn.active{background:var(--gold);border-color:var(--gold);color:var(--dark);font-weight:700;}
+.lang-btn:hover:not(.active){border-color:var(--gold);color:var(--paper);}
+body.lang-en .zh{display:none!important;}
+body.lang-zh .en{display:none!important;}
+body.lang-en .en{display:block;}
+body.lang-zh .zh{display:block;}
+body.lang-en .en-i{display:inline;}
+body.lang-zh .zh-i{display:inline;}
+body.lang-en .zh-i{display:none!important;}
+body.lang-zh .en-i{display:none!important;}
+.zh{font-family:'Noto Serif SC','Libre Baskerville',serif;}
+span.en,span.zh{display:inline;}
+
+/* MASTHEAD */
+.masthead{background:var(--ink);color:var(--paper);padding:4rem 2rem 3rem;position:relative;overflow:hidden;border-bottom:4px solid var(--gold);}
+.sun-bg{position:absolute;right:-120px;top:-120px;width:480px;height:480px;opacity:0.06;pointer-events:none;}
+.mh-inner{max-width:960px;margin:0 auto;position:relative;z-index:1;}
+.series-label{font-family:'Space Mono',monospace;font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;display:block;}
+.mh-h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5vw,3.8rem);font-weight:900;line-height:1.05;max-width:760px;}
+.mh-h1 em{font-style:italic;color:var(--gold);}
+.mh-h1.zh{font-family:'Noto Serif SC',serif;font-size:clamp(1.8rem,4vw,3.2rem);line-height:1.15;}
+.mh-sub{margin-top:1.2rem;font-size:1rem;color:rgba(245,239,224,0.72);font-style:italic;max-width:580px;}
+.mh-sub.zh{font-style:normal;font-family:'Noto Serif SC',serif;}
+.mh-meta{margin-top:2rem;padding-top:1.2rem;border-top:1px solid rgba(196,169,107,0.3);display:flex;gap:2rem;flex-wrap:wrap;font-family:'Space Mono',monospace;font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(245,239,224,0.4);}
+
+/* INTRO */
+.intro{max-width:780px;margin:0 auto;padding:4rem 2rem 2rem;}
+.intro h2{font-family:'Playfair Display',serif;font-size:1.65rem;font-weight:700;margin-bottom:1.2rem;}
+.intro h2.zh{font-family:'Noto Serif SC',serif;}
+.intro p{margin-bottom:1.1rem;color:#2e2416;}
+.intro p+p{text-indent:1.5em;}
+
+.divider{max-width:780px;margin:1rem auto;padding:0 2rem;display:flex;align-items:center;gap:1rem;}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:var(--rule);}
+.divider span{font-family:'Space Mono',monospace;font-size:0.63rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--dim);white-space:nowrap;}
+
+/* GALLERY */
+.gallery{max-width:1100px;margin:0 auto;padding:2rem 2rem 4rem;}
+.poster-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:2rem;}
+.pcard{background:var(--cream);border:1px solid var(--rule);cursor:pointer;transition:transform 0.25s,box-shadow 0.25s;display:flex;flex-direction:column;overflow:hidden;}
+.pcard:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(26,18,8,0.15);}
+.pcard-img{position:relative;overflow:hidden;background:var(--aged);aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;}
+.pcard-img img{width:100%;height:100%;object-fit:contain;object-position:center;display:block;transition:transform 0.4s;background:var(--aged);}
+.pcard:hover .pcard-img img{transform:scale(1.03);}
+.pcard-ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.6rem;padding:1.5rem;text-align:center;background:var(--aged);}
+.pcard-ph span{font-family:'Playfair Display',serif;font-style:italic;font-size:0.9rem;color:var(--dim);line-height:1.4;}
+.pcard-hint{position:absolute;bottom:0;left:0;right:0;padding:0.7rem 1rem;background:linear-gradient(transparent,rgba(26,18,8,0.7));font-family:'Space Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(245,239,224,0.9);opacity:0;transform:translateY(4px);transition:opacity 0.3s,transform 0.3s;}
+.pcard:hover .pcard-hint{opacity:1;transform:translateY(0);}
+.pcard-body{padding:1.2rem 1.4rem 1.5rem;flex:1;display:flex;flex-direction:column;}
+.pcard-num{font-family:'Space Mono',monospace;font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--dim);margin-bottom:0.4rem;}
+.pcard-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;line-height:1.25;margin-bottom:0.4rem;}
+.pcard-title.zh{font-family:'Noto Serif SC',serif;}
+.pcard-meta{font-family:'Space Mono',monospace;font-size:0.6rem;letter-spacing:0.08em;color:var(--dim);margin-bottom:0.8rem;line-height:1.5;}
+.pcard-desc{font-size:0.82rem;color:#2e2416;line-height:1.7;flex:1;}
+.pcard-tags{margin-top:0.9rem;display:flex;flex-wrap:wrap;gap:0.3rem;}
+.tag{font-family:'Space Mono',monospace;font-size:0.55rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.15rem 0.45rem;border:1px solid;}
+.tgold{color:var(--gold);border-color:var(--gold);}
+.tred{color:var(--red);border-color:var(--red);}
+.trust{color:var(--rust);border-color:var(--rust);}
+
+/* MODAL */
+.modal-overlay{position:fixed;inset:0;z-index:2000;background:rgba(12,9,4,0.92);opacity:0;pointer-events:none;transition:opacity 0.3s;display:flex;align-items:flex-start;justify-content:center;overflow-y:auto;padding:2rem 1rem;}
+.modal-overlay.open{opacity:1;pointer-events:all;}
+.modal{background:var(--cream);max-width:980px;width:100%;margin:auto;position:relative;border:1px solid var(--rule);transform:translateY(20px);transition:transform 0.3s;}
+.modal-overlay.open .modal{transform:translateY(0);}
+.modal-close{position:absolute;top:1rem;right:1rem;z-index:10;width:2.2rem;height:2.2rem;border:1px solid var(--rule);background:var(--cream);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;color:var(--dim);transition:all 0.2s;}
+.modal-close:hover{background:var(--ink);color:var(--paper);}
+.modal-grid{display:grid;grid-template-columns:1fr 1fr;}
+.modal-img{background:var(--aged);display:flex;align-items:flex-start;justify-content:center;min-height:500px;position:relative;overflow:hidden;}
+.modal-img img{width:100%;height:100%;object-fit:contain;object-position:top center;display:block;}
+.modal-img-credit{position:absolute;bottom:0.5rem;left:0.6rem;font-family:'Space Mono',monospace;font-size:0.55rem;color:rgba(26,18,8,0.5);}
+.modal-text{padding:2.2rem 2.2rem;overflow-y:auto;max-height:90vh;border-left:1px solid var(--rule);}
+.modal-ex{font-family:'Space Mono',monospace;font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--dim);margin-bottom:0.5rem;}
+.modal-title{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;line-height:1.15;margin-bottom:0.4rem;}
+.modal-title.zh{font-family:'Noto Serif SC',serif;font-size:1.2rem;}
+.modal-meta{font-family:'Space Mono',monospace;font-size:0.58rem;letter-spacing:0.07em;color:var(--dim);line-height:1.6;margin-bottom:1.1rem;padding-bottom:1rem;border-bottom:1px solid var(--rule);}
+.modal-tags{display:flex;flex-wrap:wrap;gap:0.3rem;margin-bottom:1.2rem;}
+
+/* DESCRIPTION BLOCK */
+.desc-block{background:var(--aged);border-left:3px solid var(--rule);padding:1rem 1.2rem;margin-bottom:1.3rem;}
+.desc-block h4{font-family:'Space Mono',monospace;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--dim);margin-bottom:0.6rem;}
+.desc-block p{font-size:0.83rem;line-height:1.7;color:#2e2416;margin-bottom:0.5rem;}
+.desc-block p:last-child{margin-bottom:0;}
+.text-translation{background:rgba(184,134,11,0.08);border:1px solid rgba(184,134,11,0.25);padding:0.6rem 0.8rem;margin:0.5rem 0;font-size:0.82rem;line-height:1.65;}
+.text-translation strong{font-family:'Space Mono',monospace;font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.2rem;}
+
+.modal-body p{font-size:0.86rem;line-height:1.78;color:#2e2416;margin-bottom:0.9rem;}
+.modal-body p+p{text-indent:1.1em;}
+.pull{margin:1.2rem 0;padding:0.75rem 0 0.75rem 1.1rem;border-left:3px solid var(--gold);font-family:'Playfair Display',serif;font-style:italic;font-size:0.93rem;color:var(--ink);line-height:1.5;}
+.pull.zh{font-family:'Noto Serif SC',serif;font-style:normal;}
+.modal-src{margin-top:1.3rem;padding-top:0.9rem;border-top:1px solid var(--rule);}
+.modal-src a{font-family:'Space Mono',monospace;font-size:0.6rem;letter-spacing:0.08em;color:var(--rust);text-decoration:none;}
+.modal-src a:hover{text-decoration:underline;}
+
+/* HAKKO INTERLUDE */
+.hakko-section{position:relative;background:var(--ink);color:var(--paper);padding:5rem 2rem;overflow:hidden;}
+.hakko-bg{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0.04;pointer-events:none;font-size:40vw;line-height:1;color:var(--gold);font-family:'Noto Serif SC',serif;user-select:none;}
+.hakko-inner{max-width:900px;margin:0 auto;position:relative;z-index:1;display:grid;grid-template-columns:1fr 2fr;gap:4rem;align-items:start;}
+.hakko-kanji{font-family:'Noto Serif SC',serif;font-size:5rem;line-height:1;color:var(--gold);writing-mode:vertical-rl;text-orientation:mixed;letter-spacing:0.1em;}
+.hakko-text h2{font-family:'Playfair Display',serif;font-size:1.55rem;font-style:italic;color:var(--gold);margin-bottom:1rem;}
+.hakko-text h2.zh{font-family:'Noto Serif SC',serif;font-style:normal;}
+.hakko-text p{font-size:0.9rem;color:rgba(245,239,224,0.8);margin-bottom:0.9rem;line-height:1.8;}
+.romaji{font-family:'Space Mono',monospace;font-size:0.72rem;letter-spacing:0.15em;color:rgba(184,134,11,0.7);margin-top:0.4rem;}
+
+/* ANALYSIS SECTION */
+.analysis-section{max-width:780px;margin:0 auto;padding:4rem 2rem;}
+.analysis-section h2{font-family:'Playfair Display',serif;font-size:1.55rem;font-weight:700;margin-bottom:1.4rem;}
+.analysis-section h2.zh{font-family:'Noto Serif SC',serif;}
+.analysis-section p{margin-bottom:1rem;color:#2e2416;}
+.analysis-section p+p{text-indent:1.5em;}
+
+/* BIB */
+.bib{background:var(--aged);padding:3rem 2rem;border-top:2px solid var(--rule);}
+.bib-in{max-width:780px;margin:0 auto;}
+.bib h2{font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--dim);margin-bottom:1.8rem;}
+.bib-e{font-size:0.84rem;line-height:1.65;color:var(--ink);margin-bottom:0.9rem;padding-left:1.8em;text-indent:-1.8em;}
+
+footer{background:var(--ink);color:rgba(245,239,224,0.35);padding:1.5rem 2rem;font-family:'Space Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;text-align:center;}
+
+@media(max-width:700px){
+  .modal-grid{grid-template-columns:1fr;}
+  .modal-img{min-height:280px;}
+  .modal-text{border-left:none;border-top:1px solid var(--rule);max-height:none;}
+  .poster-grid{grid-template-columns:1fr 1fr;gap:1rem;}
+  .hakko-inner{grid-template-columns:1fr;}
+  .hakko-kanji{writing-mode:horizontal-tb;font-size:3.5rem;}
+}
+@media(max-width:480px){.poster-grid{grid-template-columns:1fr;}}
+</style>
+
+
+
+<!-- SVG Rising Sun (inline, reusable) -->
+<svg style="display:none">
+  <symbol id="rising-sun" viewBox="0 0 200 200">
+    <circle cx="100" cy="100" r="38" fill="currentColor"></circle>
+    <g stroke="currentColor" stroke-width="3.5" fill="none">
+      <line x1="100" y1="10" x2="100" y2="52"></line>
+      <line x1="100" y1="148" x2="100" y2="190"></line>
+      <line x1="10" y1="100" x2="52" y2="100"></line>
+      <line x1="148" y1="100" x2="190" y2="100"></line>
+      <line x1="37" y1="37" x2="67" y2="67"></line>
+      <line x1="133" y1="133" x2="163" y2="163"></line>
+      <line x1="163" y1="37" x2="133" y2="67"></line>
+      <line x1="67" y1="133" x2="37" y2="163"></line>
+      <line x1="22" y1="68" x2="58" y2="80"></line>
+      <line x1="142" y1="120" x2="178" y2="132"></line>
+      <line x1="68" y1="22" x2="80" y2="58"></line>
+      <line x1="120" y1="142" x2="132" y2="178"></line>
+      <line x1="178" y1="68" x2="142" y2="80"></line>
+      <line x1="58" y1="120" x2="22" y2="132"></line>
+      <line x1="132" y1="22" x2="120" y2="58"></line>
+      <line x1="80" y1="142" x2="68" y2="178"></line>
+    </g>
+  </symbol>
+</svg>
+
+<div class="lang-bar">
+  <span class="lang-bar-title">HIST 343 · Primary Source Archive</span>
+  <div class="lang-btns">
+    <button class="lang-btn active" onclick="setLang(&#39;en&#39;)">English</button>
+    <button class="lang-btn" onclick="setLang(&#39;zh&#39;)">中文</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <svg class="sun-bg" style="color:var(--gold)" viewBox="0 0 200 200"><use href="#rising-sun"></use></svg>
+  <div class="mh-inner">
+    <span class="series-label"><span class="en-i">Visual Archive · Pan-Asian Propaganda · 1931–1945</span><span class="zh-i">视觉档案 · 泛亚主义宣传画 · 1931–1945</span></span>
+    <h1 class="mh-h1 en">The Doubled Edge:<br><em>Pan-Asianism, Racial Ideology,<br>and the Art of Ambiguity</em></h1>
+    <h1 class="mh-h1 zh">被支配的平等：<br>泛亚主义、种族意识形态<br>与歧义的艺术</h1>
+    <p class="mh-sub en">A critical visual analysis of Japanese wartime propaganda posters and the ideological contradictions encoded within them.</p>
+    <p class="mh-sub zh">对日本战时宣传画及其内在意识形态矛盾的批判性视觉分析。</p>
+    <div class="mh-meta">
+      <span>HIST 343</span>
+      <span class="en-i">Primary Source Archive</span><span class="zh-i">史料档案</span>
+      <span class="en-i">Seven Posters · 1937–1944</span><span class="zh-i">泛亚宣传 · 1937–1944</span>
+    </div>
+  </div>
+</header>
+
+<section class="intro">
+  <h2 class="en">The Theme</h2>
+  <h2 class="zh">研究主题</h2>
+  <p class="en">Between 1931 and 1945, the Japanese imperial state and its various puppet governments across East and Southeast Asia produced an extraordinary volume of visual propaganda. These images pursued a single, internally contradictory objective: to present Japanese military expansion as liberation — from Western colonialism, from racial hierarchy — while simultaneously encoding Japan's own racial supremacy and its right to lead, direct, and ultimately dominate the nations it claimed to be freeing.</p>
+  <p class="zh">1931年至1945年间，日本帝国及其在东亚、东南亚各地扶植的傀儡政权制造了大量视觉宣传材料。这些图像追求一个内在矛盾的单一目标：将日本的军事扩张呈现为解放——从西方殖民主义、从种族等级制度中解放——同时宣称日本自身的种族优越性及其领导并最终支配亚洲的正当性。</p>
+  <p class="en">This archive assembles four propaganda posters from official and institutional collections. Each is read not merely as a historical document, but as a visual argument: a site where ideology and aesthetic form meet. The posters are analyzed for what they depict, what text they carry, who their audiences were, and what ideological work they perform. Broader thematic analysis follows the gallery.</p>
+  <p class="zh">本档案汇集四张来自官方及学术机构馆藏的宣传画。对图像的解读不仅停留其文献价值，更将其视作一种视觉论证：意识形态与美学形式相交汇之处。采用的分析聚焦于图像所描绘的内容、所携带的文字、所针对的受众以及所隐含的意识形态框架。更宏观的主题分析置于图册之后。</p>
+</section>
+
+<div class="divider"><span><span class="en-i">The Posters — Click Any Image to Explore</span><span class="zh-i">宣传画 — 点击图像深入分析</span></span></div>
+
+<section class="gallery">
+  <div class="poster-grid">
+
+    <!-- CARD 1 -->
+    <div class="pcard" onclick="openModal(&#39;m1&#39;)">
+      <div class="pcard-img">
+        <img src="images/Poster1.png" alt="Co-Prosperity Sphere Map" onerror="this.style.display=&#39;none&#39;">
+        <div class="pcard-hint"><span class="en-i">Click for full analysis →</span><span class="zh-i">点击查看完整分析 →</span></div>
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-num">01 / 04</div>
+        <div class="pcard-title en">Propaganda Map of the Greater East Asia Co-Prosperity Sphere</div>
+        <div class="pcard-title zh">大东亚共荣圈宣传地图</div>
+        <div class="pcard-meta"><span class="en-i">c. 1942 · Cabinet Information Bureau · Encyclopædia Britannica</span><span class="zh-i">约1942年 · 内阁情报局 · 大英百科全书馆藏</span></div>
+        <p class="pcard-desc en">A pedagogical map teaching Japanese children and public in the occupied regions how to see empire. Across China and Southeast Asia, the flags of Western powers lie broken while local figures raise the rising sun in acclamation. Japanese soldiers fight the West with ruthless force and befriend Asian civilians with paternal tenderness—a structural division that recasts occupation as protection, hierarchy as family, and aggression as historical necessity.</p>
+        <p class="pcard-desc zh">以儿童与占领区大众为对象的帝国宣传画报，将亚太地区呈现为一幕旗帜更替的仪式性图景。破碎的西方列强国旗被扫除殆尽，亚洲本地民众手举日本太阳旗。日本军队以双重面目出现——对西方敌人冷酷无情，对亚洲平民亲如兄长——而罗斯福与丘吉尔被挤压于画面边缘，沦为历史的旁观者。一幅面向大众的帝国道德启蒙视觉教材。</p>
+        <div class="pcard-tags"><span class="tag tgold"><span class="en-i">Spatial Hierarchy</span><span class="zh-i">空间等级</span></span><span class="tag trust"><span class="en-i">Cartographic Rhetoric</span><span class="zh-i">制图修辞</span></span></div>
+      </div>
+    </div>
+
+  
+    <!-- CARD 2 -->
+    <div class="pcard" onclick="openModal(&#39;m2&#39;)">
+      <div class="pcard-img">
+        <img src="images/Poster2.jpg" alt="Modernist Occupation Poster" onerror="this.style.display=&#39;none&#39;;this.nextElementSibling.style.display=&#39;flex&#39;">
+        <div class="pcard-ph" style="display:none"><span class="en-i">Peace Memorial Museum Poster · c. 1942–44</span><span class="zh-i">和平纪念馆藏宣传画 · 约1942–44年</span></div>
+        <div class="pcard-hint"><span class="en-i">Click for full analysis →</span><span class="zh-i">点击查看完整分析 →</span></div>
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-num">02 / 04</div>
+        <div class="pcard-title en">Japanese Occupation Modernist Poster</div>
+        <div class="pcard-title zh">日本占领时期现代主义宣传画</div>
+        <div class="pcard-meta"><span class="en-i">c. 1942–44 · Japanese Military Administration · Peace Memorial Museum, KL</span><span class="zh-i">约1942–44年 · 日本军政当局 · 马来西亚和平纪念馆</span></div>
+        <p class="pcard-desc en">A wartime cartoon depicts the Greater East Asia Co-Prosperity Sphere as a round-table of economic roles. Delegates wearing armbands represent different regions and present their assigned contributions. Japan alone provides battleships and steel, while others supply raw materials.A wall map behind them frames the Sphere as a closed system sealed off from Anglo-American influence. Through a half-open door, an Indian and an Aboriginal Australian enter, shown as “awakening” to an East Asian identity. Although the round table suggests equality, the distribution of resources reveals hierarchy: extraction is reframed as contribution, and asymmetry is aestheticized as cooperation, naturalizing Japanese leadership as development.</p>
+        <p class="pcard-desc zh">该战时漫画将“大东亚共荣圈”呈现为一个圆桌式经济分工体系。各参与者佩戴臂章，代表不同地区并展示各自“贡献”，其中日本提供战舰与钢铁，其他地区主要提供原材料。背景墙上的地图将共荣圈描绘为一个封闭体系，并与英美势力隔绝。画面右侧一扇半开的门中，一位印度人和一位澳大利亚原住民被表现为“觉醒”并进入东亚认同的过程。圆桌表面象征平等，但资源分配结构揭示其等级本质：掠夺被表述为贡献，不平等被美学化为协作，从而将日本的主导地位自然化为发展秩序。</p>
+        <div class="pcard-tags"><span class="tag trust"><span class="en-i">Pan-Asian Propaganda</span><span class="zh-i">泛亚宣传</span></span><span class="tag tgold"><span class="en-i">Hierarchy under "Equality"</span><span class="zh-i">“平等”下的阶层</span></span></div>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="pcard" onclick="openModal(&#39;m3&#39;)">
+      <div class="pcard-img">
+        <img src="images/Poster3.png" alt="Anti-Chiang Poster" onerror="this.style.display=&#39;none&#39;;this.nextElementSibling.style.display=&#39;flex&#39;">
+        <div class="pcard-ph" style="display:none"><span class="en-i">Anti-Nationalist Poster · c. 1938–42</span><span class="zh-i">反国民党宣传画 · 约1938–42年</span></div>
+        <div class="pcard-hint"><span class="en-i">Click for full analysis →</span><span class="zh-i">点击查看完整分析 →</span></div>
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-num">03 / 04</div>
+        <div class="pcard-title en">"East Asian Peace; Down with the Nanjing Regime!"</div>
+        <div class="pcard-title zh">“东亚和平；打倒南京政府！”</div>
+        <div class="pcard-meta"><span class="en-i">c. 1937 · Back cover of children's book Wo de huaji (我的畫集) · DHI / AHRC Chiang Kai-shek Visual Archive, Artwork 10</span><span class="zh-i">约1937年 · 名为《我的畫集》的儿童读本封面 · DHI / 英国人文艺术研究委员会蒋介石视觉档案，作品10</span></div>
+        <p class="pcard-desc en">A children’s book cover poster structured along a diagonal ascent. At the base, Chiang Kai-shek lies crumpled. Dominating the center is a towering Japanese soldier: his right fist enacts destruction, while his left arm shields civilians ascending above him. These smaller figures appear cheerful, laughing as they wave Japanese and five-colored Chinese flags among livestock. At the apex, a radiant sun sanctifies the composition. The soldier’s dual gesture, one violent, one protective, frames a single ideological message: that Japanese destruction and Japanese protection are not opposites, but expressions of one righteous mission.</p>
+        <p class="pcard-desc zh">这是一张儿童读物封面海报，画面结构以一条对角线上升的构图展开。画面底部，蒋介石被击倒、蜷伏在地。画面中心，一名巨大的日本士兵占据主导位置：他的右拳象征破坏与打击，而左臂则保护着向上延伸的平民群体。这些较小的人物面带笑容，在牲畜之间挥舞日本国旗与五色中华旗，显得轻松而欢快。画面顶端，一轮光芒四射的太阳赋予整个构图以神圣性。士兵一手施暴、一手守护的姿态，被统一诠释为同一套意识形态叙事：所谓“破坏”与“保护”并非对立，而是同一种正当使命的两种体现。</p>
+        <div class="pcard-tags"><span class="tag tred"><span class="en-i">Construction of the Other</span><span class="zh-i">他者的建构</span></span><span class="tag trust"><span class="en-i">Intra-Asian Division</span><span class="zh-i">亚洲内部分裂</span></span></div>
+      </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="pcard" onclick="openModal(&#39;m4&#39;)">
+      <div class="pcard-img">
+        <img src="images/Poster4.jpg" alt="Drive Out the English" onerror="this.style.display=&#39;none&#39;;this.nextElementSibling.style.display=&#39;flex&#39;">
+        <div class="pcard-ph" style="display:none"><span class="en-i">National Army Museum · NAM 2000-06-163-1</span><span class="zh-i">英国国家陆军博物馆 · NAM 2000-06-163-1</span></div>
+        <div class="pcard-hint"><span class="en-i">Click for full analysis →</span><span class="zh-i">点击查看完整分析 →</span></div>
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-num">04 / 04</div>
+        <div class="pcard-title en">"This Is an Apt Occasion to Drive Out the English from Asia"</div>
+        <div class="pcard-title zh">「將英國人趕出亞洲之大好時機」」</div>
+        <div class="pcard-meta"><span class="en-i">1944 · Burma Theater · National Army Museum, London · NAM 2000-06-163-1</span><span class="zh-i">1944年 · 缅甸战区 · 英国国家陆军博物馆 · NAM 2000-06-163-1</span></div>
+        <p class="pcard-desc en">A 1944 leaflet targeting British India, printed in South Asian scripts. Five Asian men, among them a Japanese soldier cast as a co-liberator, sit atop a globe, raising their glasses in celebration. Beneath them, a British figure collapses, his flag patched and coins spilling outward. The vertical composition itself advances the argument: Asia above, Britain below; unity above, disintegration below. Imperial markers are deliberately subdued, allowing Pan-Asianism to appear not as a Japanese-imposed ideology, but as an already realized Asian truth. The viewer is positioned not as a participant in an ongoing struggle, but as a witness to an accomplished victory.</p>
+        <p class="pcard-desc zh">这是一张1944年的传单，面向英属印度地区发行，使用南亚文字书写。画面中，五名亚洲男子坐在地球之上举杯庆祝，其中包括一名被塑造为“共同解放者”的日本士兵。画面下方，一名英国形象倒地崩溃，国旗斑驳，金币四散。整个画面的垂直构图本身即构成论证：上方是亚洲的团结与胜利，下方是英国的瓦解与失败。帝国符号被刻意弱化，使“泛亚主义”不再呈现为日本主导的意识形态，而被塑造成一种“早已实现的亚洲真理”。观者不再被邀请参与斗争，而是被置于一个既成胜利的见证者位置之中。</p>
+        <div class="pcard-tags"><span class="tag tgold"><span class="en-i">ANTI-COLONIAL APPROPRIATION</span><span class="zh-i">反殖民挪用</span></span><span class="tag tred"><span class="en-i">Compositional Hierarchy</span><span class="zh-i">构图等级</span></span></div>
+      </div>
+    </div>
+ 
+  </div>
+</section>
+
+
+<!-- RESISTANCE SUBSECTION -->
+<div style="background:var(--paper);color:var(--ink);border-top:2px solid var(--rule);border-bottom:2px solid var(--rule);padding:4rem 2rem;">
+  <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 340px;gap:4rem;align-items:start;">
+
+    <!-- LEFT: main text -->
+    <div>
+      <p class="en" style="font-family:&#39;Space Mono&#39;,monospace;font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--dim);margin-bottom:1rem;">Contextual Supplement · Resistance &amp; Culture</p>
+      <p class="zh" style="font-family:&#39;Space Mono&#39;,monospace;font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--dim);margin-bottom:1rem;">背景补充 · 抵抗与文化</p>
+
+      <h2 class="en" style="font-family:&#39;Playfair Display&#39;,serif;font-size:1.55rem;font-weight:700;color:var(--ink);font-style:normal;margin-bottom:1.3rem;">Resistance to Japan: Culture in Manchukuo</h2>
+      <h2 class="zh" style="font-family:&#39;Noto Serif SC&#39;,serif;font-size:1.4rem;font-weight:700;color:var(--ink);margin-bottom:1.3rem;">对泛亚的抵抗：满洲国的文学与文化</h2>
+
+      <!-- EN: original text verbatim, paragraph by paragraph -->
+      <p class="en" style="color:var(--ink);margin-bottom:1.1rem;">Resistance to imperialism and oppression can be poetic. In the Japanese puppet state of Manchukuo, this was no mere metaphor but a reality. Manchuria is a region in Northeast China bordering the Korean peninsula. It was from the Korean peninsula that imperial Japanese forces invaded in 1931, establishing control over the region, installing a puppet emperor, and renaming the region to Manchukuo. As the renaming of the region suggests, the Japanese did not subjugate Manchuria only to engage only in extraction of natural resources but to create a new state that would become part of the East Asia Co-Prosperity Sphere. What the Japanese realized upon taking over Manchuria is that a new state requires a new culture. The Japanese initiative to create a new culture in Manchukuo served a dual purpose: to create unity between peoples while also entrenching a Japanese led hierarchy.</p>
+
+      <p class="en" style="color:var(--ink);margin-bottom:1.1rem;text-indent:1.5em;">On the surface, Japanese efforts to cultivate a new, shared culture between Chinese and Japanese in Manchukuo appears benign, almost benevolent. At least as benign and benevolent as an imperial project can be. Cultural initiatives were not initially controlled by a centralized propaganda bureau and would not be until 1941. Individual state-sponsored entities created opportunities for all of the peoples living in Manchukuo whether they be one of the five peoples of China (Han, Manchu, Mongol, Tibetan, or Uyghur), Japanese, or Korean. The Concordia Association, led by Muto Tomio, is an example of one such organization. The Concordia Association hosted a variety of competitions where individuals could submit their art or literature to be judged and win prizes. The competitions helped foster the development of the new culture of Manchukuo by incentivising cultural contributions and rewarding those that fit Japanese designs. Until 1941, the Japanese Government allowed the culture to develop on its own, albeit with encouragement from organizations like the Concordia Association. The idea in the Japanese mind was to create a shared culture with Manchurian characteristics. A shared culture could then be used as a legitimate basis for the creation of a new, multi-ethnic state which could be incorporated into the East Asian Co-Prosperity Sphere.</p>
+
+      <p class="en" style="color:var(--ink);margin-bottom:1.1rem;text-indent:1.5em;">Beneath the surface of the Japanese sponsored cultural initiatives hid a clear strategy for legitimising Japanese preeminence in Manchukuo. Although the Japanese Government did not control the development of culture in Manchukuo directly, Japanese officials encouraged a culture that took its cues from Japan. The art and literature of manchukuo may have Manchurian characteristics, but it followed Japanese forms. Japanese avant-garde forms of literature and art were particularly prevalent in Manchukuo prior to the consolidation of cultural propaganda in 1941. Japanese also dominated Manchukuo's cultural institutions with Chinese and Koreans being relegated to the lowest positions with limited ability for advancement. Collections of literature published in Manchukuo also contained a majority of Japanese writers' works with works from Korean writers often being entirely absent. After 1941, art and literature became heavily pro-Japanese regardless of form. Shared culture became not a method of unifying peoples but mobilizing for war once the Japanese government consolidated control over propaganda in Manchukuo. The image of cultural unity the Japanese attempted to create by fostering a new culture served merely as a veneer over a mechanism of imperial control. The Chinese were not blind to this reality and culture, literature in particular, became a key mode of resistance.</p>
+
+      <p class="en" style="color:var(--ink);margin-bottom:1.1rem;text-indent:1.5em;"><em>Resisting Manchukuo : Chinese Women Writers and the Japanese Occupation</em> by Norman Smith recounts the efforts of seven female writers in Manchukuo who left legacies of resistance to Japanese imperialism. The seven women, Mei Niang, Dan Di, Lan Ling, Wu Ying, Yang Xu, Zhu Ti, and Zuo Di, all benefited from the Japanese desire to create a new culture. At the cultural institutions of Manchukuo, all seven were able to make careers out of writing. A feat made more impressive by the fact that they were women as cultural norms, similar to those in the West, confined women to the home. The ability to create a career did not however translate to complicity in imperialism. The seven women used their platforms to critique the propaganda of the new Manchukuo culture.</p>
+
+      <p class="en" style="color:var(--ink);margin-bottom:1.1rem;text-indent:1.5em;">Official propaganda, whether it be a picture or piece of writing, depicts the incipient nation as a harmonious, bountiful, peaceful land. In short, a utopia. However, the writings of the seven women reveal that this utopia is nowhere. Where propaganda portrays Manchukuo as bright and calm, the women describe the environment of their stories as dark and chaotic. Where official propaganda depicts a land of harmony between people, the women write of a land rife with patriarchy and oppression. The seven women also combat the new culture of Manchukuo by relying on themes and styles from the May Fourth Movement, a purely Chinese cultural movement which emerged following World War I. The consolidation of propaganda in 1941 led to a crackdown against negative portrayals of Manchukuo. Rather than acquiesce to the demands of empire, the seven women sacrificed their careers. Unfortunately, their careers would not recover despite the withdrawal of Japanese forces, as civil war erupted following the end of World War II. Nonetheless, their work sheds light on the true nature of Japanese occupation and remains as a legacy of imperial resistance.</p>
+
+      <!-- ZH translation -->
+      <p class="zh" style="color:var(--ink);margin-bottom:1.1rem;">抵抗帝国主义与压迫可以是诗意的。在日本扶植的傀儡国家满洲国，这绝非单纯的隐喻，而是现实。满洲是中国东北与朝鲜半岛接壤的地区。日本帝国军队正是从朝鲜半岛于1931年入侵，建立对该地区的控制，扶植傀儡皇帝，并将该地区更名为满洲国。更名本身就表明，日本征服满洲不仅是为了掠夺自然资源，而是要建立一个将成为东亚共荣圈一部分的新国家。日本人在接管满洲后意识到，新国家需要新文化。日本在满洲国推行新文化的举措具有双重目的：在民众之间创造统一的同时，强化日本领导的等级结构。</p>
+
+      <p class="zh" style="color:var(--ink);margin-bottom:1.1rem;text-indent:1.5em;">表面上，日本在满洲国培育中日共同新文化的努力几乎显得无害。文化举措起初并不受中央宣传机构的直接控制——这种整合要到1941年才会出现。以武藤富男为首的协和会等国家资助组织举办各类竞赛，民众可以提交艺术或文学作品参评并赢取奖励，以此激励文化贡献，并奖励那些符合日本设计的作品。日本人的构想是创造一种具有满洲特色的共同文化——为建立一个可纳入共荣圈的新型多民族国家提供合法的文化基础。</p>
+
+      <p class="zh" style="color:var(--ink);margin-bottom:1.1rem;text-indent:1.5em;">然而在这一表面之下，隐藏着一套将日本优越地位合法化的清晰策略。满洲国的艺术与文学或许具有满洲特色，但遵循的是日本形式。1941年以前，日本先锋派形式尤为盛行。日本人还主导着满洲国的文化机构，中国人与朝鲜人被降至最低职位，晋升空间极为有限。1941年后，无论采用何种形式，艺术与文学都变得高度亲日。共同文化不再是统一民众的方式，而成为动员战争的工具。文化统一的形象不过是帝国控制机制上的一层薄薄的外衣。中国人对这一现实并非一无所知——文化，尤其是文学，成为了抵抗的关键方式。</p>
+
+      <p class="zh" style="color:var(--ink);margin-bottom:1.1rem;text-indent:1.5em;">诺曼·史密斯所著《抵抗满洲国：中国女性作家与日本占领》记述了七位女性作家——梅娘、淡滴、蓝苓、吴瑛、杨絮、朱滴、左蒂——留下抵抗日本帝国主义遗产的努力。七人均在满洲国的文化机构建立了自己的事业，考虑到当时的文化规范将女性局限于家庭，这一成就尤为难能可贵。然而，事业的建立并未转化为对帝国主义的顺从。七位女性利用自己的平台批判满洲国新文化的宣传。</p>
+
+      <p class="zh" style="color:var(--ink);margin-bottom:1.1rem;text-indent:1.5em;">官方宣传将这个新生国家描绘为和谐、富饶、和平的土地——简而言之，一个乌托邦。七位女性的作品揭示，这个乌托邦无处可寻。宣传将满洲国描绘得明亮而平静，女性们却将故事环境描述为黑暗而混乱。官方宣传描绘各民族之间的和谐共处，女性们却书写了一片充斥着父权与压迫的土地。她们还借助五四运动的主题与风格来抵抗满洲国新文化。1941年宣传整合后，对满洲国负面描写的打压随之而来。七位女性没有屈从于帝国的要求，而是牺牲了自己的事业。即便在日本撤军后，她们的事业也未能恢复，因为二战结束后内战随即爆发。尽管如此，她们的作品揭示了日本占领的真实本质，作为帝国抵抗的遗产留存至今。</p>
+
+      <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--rule);">
+        <p style="font-family:&#39;Space Mono&#39;,monospace;font-size:0.6rem;letter-spacing:0.08em;color:var(--dim);">Source: Smith, Norman. <em>Resisting Manchukuo: Chinese Women Writers and the Japanese Occupation.</em> University of British Columbia Press, 2007.</p>
+      </div>
+    </div>
+
+    <div style="position:sticky;top:80px;">
+  <div style="background:var(--dark);border:1px solid rgba(196,169,107,0.25);padding:1.8rem;">
+
+    <p style="font-family:&#39;Space Mono&#39;,monospace;font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:0.3rem;">
+      <span class="en-i">Glossary of Key Terms</span><span class="zh-i">关键术语词汇表</span>
+    </p>
+    <div style="width:2rem;height:1px;background:var(--gold);margin-bottom:1.4rem;"></div>
+
+    <!-- term 1 -->
+    <div style="margin-bottom:1.4rem;padding-bottom:1.4rem;border-bottom:1px solid rgba(196,169,107,0.2);">
+      <p style="font-family:&#39;Playfair Display&#39;,serif;font-size:0.95rem;font-weight:700;color:var(--gold);margin-bottom:0.15rem;">
+        <span class="en-i">Manchukuo</span><span class="zh-i">满洲国</span>
+      </p>
+      <p style="font-family:&#39;Space Mono&#39;,monospace;font-size:0.58rem;color:rgba(196,169,107,0.5);letter-spacing:0.08em;margin-bottom:0.4rem;">
+        <span class="en-i">1932–1945</span><span class="zh-i">1932–1945</span>
+      </p>
+      <p style="font-size:0.8rem;color:rgba(245,239,224,0.75);line-height:1.7;">
+        <span class="en-i">A state established in Northeast China in 1932 under Japanese control. Although Puyi, the last Qing emperor, was installed as nominal ruler under the title Kangde Emperor, real authority was exercised by the Japanese Kwantung Army and associated administrative structures. Manchukuo functioned as a key site for testing imperial governance under the ideological framework of the Greater East Asia Co-Prosperity Sphere.</span>
+        <span class="zh-i">1932年在中国东北建立、由日本控制的国家。末代清朝皇帝溥仪被立为名义统治者（康德皇帝），但实际权力由日本关东军及其行政体系掌握。满洲国成为在“大东亚共荣圈”意识形态框架下检验帝国治理能力的重要实验场。</span>
+      </p>
+    </div>
+
+    <!-- term 2 -->
+    <div style="margin-bottom:1.4rem;padding-bottom:1.4rem;border-bottom:1px solid rgba(196,169,107,0.2);">
+      <p style="font-family:&#39;Playfair Display&#39;,serif;font-size:0.95rem;font-weight:700;color:var(--gold);margin-bottom:0.15rem;">
+        <span class="en-i">The Concordia Association</span><span class="zh-i">协和会</span>
+      </p>
+      <p style="font-family:&#39;Space Mono&#39;,monospace;font-size:0.58rem;color:rgba(196,169,107,0.5);letter-spacing:0.08em;margin-bottom:0.4rem;">
+        <span class="en-i">1932–1945</span><span class="zh-i">1932–1945</span>
+      </p>
+      <p style="font-size:0.8rem;color:rgba(245,239,224,0.75);line-height:1.7;">
+        <span class="en-i">The principal state-sponsored mass organization in Manchukuo, led by figures such as Muto Tomio. It organized cultural, civic, and educational activities across ethnic lines while promoting an official ideology of harmony. In practice, it functioned as a mechanism for coordinating and steering cultural production toward Japanese political and aesthetic norms under imperial supervision.</span>
+        <span class="zh-i">满洲国主要的国家资助群众组织，由武藤富男等人领导。其跨族群组织文化、教育与公民活动，并宣扬官方“协和”理念。然而在实际运作中，它成为在帝国监督下引导文化生产向日本政治与美学规范靠拢的机制。</span>
+      </p>
+    </div>
+
+    <!-- term 3 -->
+    <div style="margin-bottom:1.4rem;padding-bottom:1.4rem;border-bottom:1px solid rgba(196,169,107,0.2);">
+      <p style="font-family:&#39;Playfair Display&#39;,serif;font-size:0.95rem;font-weight:700;color:var(--gold);margin-bottom:0.15rem;">
+        <span class="en-i">The Five Peoples of Manchukuo</span><span class="zh-i">五族协和</span>
+      </p>
+      <p style="font-family:&#39;Space Mono&#39;,monospace;font-size:0.58rem;color:rgba(196,169,107,0.5);letter-spacing:0.08em;margin-bottom:0.4rem;">
+        <span class="en-i">official doctrine</span><span class="zh-i">官方意识形态</span>
+      </p>
+      <p style="font-size:0.8rem;color:rgba(245,239,224,0.75);line-height:1.7;">
+        <span class="en-i">The doctrine of ethnic harmony among Manchukuo’s five officially recognized groups: Japanese, Han Chinese, Manchu, Mongol, and Korean. It presented an image of voluntary multi-ethnic coexistence, while in practice Japanese authorities occupied dominant administrative and cultural positions, and other groups were integrated into a hierarchical imperial structure.</span>
+        <span class="zh-i">满洲国五个官方民族——日本人、汉族、满族、蒙古族与朝鲜族——之间民族和谐的意识形态。该理念呈现出自愿多民族共存的表象，但在实践中，日本当局占据主导行政与文化地位，其余群体被纳入等级化的帝国结构之中。</span>
+      </p>
+    </div>
+
+    <!-- term 4 -->
+    <div style="margin-bottom:1.4rem;padding-bottom:1.4rem;border-bottom:1px solid rgba(196,169,107,0.2);">
+      <p style="font-family:&#39;Playfair Display&#39;,serif;font-size:0.95rem;font-weight:700;color:var(--gold);margin-bottom:0.15rem;">
+        <span class="en-i">The May Fourth Movement</span><span class="zh-i">五四运动</span>
+      </p>
+      <p style="font-family:&#39;Space Mono&#39;,monospace;font-size:0.58rem;color:rgba(196,169,107,0.5);letter-spacing:0.08em;margin-bottom:0.4rem;">
+        <span class="en-i">1919</span><span class="zh-i">1919年</span>
+      </p>
+      <p style="font-size:0.8rem;color:rgba(245,239,224,0.75);line-height:1.7;">
+        <span class="en-i">A Chinese intellectual and cultural movement emerging from the May 4, 1919 student protests against the Treaty of Versailles settlement. It promoted vernacular literature, scientific rationalism, feminism, and critiques of Confucian hierarchy. In Manchukuo-era literary contexts, references to May Fourth often functioned as claims to an alternative Chinese cultural and literary authority.</span>
+        <span class="zh-i">一场源于1919年5月4日学生抗议《凡尔赛条约》的中国思想文化运动。其倡导白话文学、科学理性、女性主义以及对儒家等级制度的批判。在满洲国时期的文学语境中，五四常被作为确立另一种中国文化与文学权威的参照资源。</span>
+      </p>
+    </div>
+
+    <!-- term 5 -->
+    <div>
+      <p style="font-family:&#39;Playfair Display&#39;,serif;font-size:0.95rem;font-weight:700;color:var(--gold);margin-bottom:0.15rem;">
+        <span class="en-i">Japanese Avant-Garde in Manchukuo</span><span class="zh-i">满洲国的日本先锋派</span>
+      </p>
+      <p style="font-family:&#39;Space Mono&#39;,monospace;font-size:0.58rem;color:rgba(196,169,107,0.5);letter-spacing:0.08em;margin-bottom:0.4rem;">
+        <span class="en-i">pre-1941 cultural field</span><span class="zh-i">1941年前文化领域</span>
+      </p>
+      <p style="font-size:0.8rem;color:rgba(245,239,224,0.75);line-height:1.7;">
+        <span class="en-i">Before the wartime consolidation of cultural policy in the early 1940s, modernist and avant-garde forms originating in Japan, including proletarian literature, surrealism, and experimental poetry, circulated widely in Manchukuo. These forms shaped the dominant aesthetic frameworks of cultural production, even as authors of different ethnic backgrounds participated in their adaptation within imperial constraints.</span>
+        <span class="zh-i">在1940年代初战时文化政策逐步整合之前，源自日本的现代主义与先锋派形式，包括无产阶级文学、超现实主义与实验诗歌，在满洲国广泛传播。这些形式塑造了文化生产的主导美学框架，同时不同族群的作者在帝国约束下对其进行改写与适应。</span>
+      </p>
+             </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- HAKKO ICHIU SECTION -->
+<div class="hakko-section">
+  <div class="hakko-bg">宇</div>
+  <div class="hakko-inner">
+    <div>
+      <div class="hakko-kanji">八紘一宇</div>
+      <div class="romaji" style="margin-top:0.6rem;writing-mode:horizontal-tb;">Hakkō ichiu</div>
+    </div>
+    <div class="hakko-text">
+      <h2 class="en">"All the World Under One Roof" — <br>The Ideological Architecture</h2>
+      <h2 class="zh">"八纮一宇"——意识形态的建筑</h2>
+      <p class="en">The phrase hakkō ichiu (八紘一宇)—literally “eight crown cords, one roof,” and officially translated as “universal brotherhood”—served as a key ideological cornerstone of Japanese imperial expansion. Drawn from a legendary proclamation attributed to Emperor Jimmu in the ancient chronicle Nihon Shoki, it was revived in the twentieth century by the nationalist thinker Tanaka Chigaku and later popularized by Prime Minister Konoe Fumimaro in a 1940 speech. The phrase enacted precisely the dual structure traced throughout this visual archive: it asserted the equal inclusion of all peoples beneath a shared moral “roof,” while simultaneously organizing that roof around a Japanese center. Its proponents made this explicit. As one formulation put it, the Japanese “are equal to the Caucasians, but toward the peoples of Asia, we act as their leader.”</p><p class="en"> The four posters analyzed here function as visual translations of this concept. Each renders in image form the same productive ambiguity embedded in hakkō ichiu: an outward language of liberation and inclusion layered over an internal hierarchy of control. What unifies these images is a shared compositional logic in which domination is rendered compatible with harmony through spatial organization. Across the set, political relations are recast as questions of position, elevation, and alignment rather than explicit authority. Vertical arrangement replaces command as the primary expression of hierarchy: higher placement signals legitimacy, while lower placement is redefined as functional incorporation within a coherent whole. At the same time, collective scenes blur the boundary between coercion and participation, as figures appear coordinated, celebratory, or aligned even in contexts shaped by violence or conquest. This integration neutralizes intervention, producing a visual field in which asymmetry no longer registers as conflict but as differentiation within unity.</p><p class="en"> Taken together, these strategies render imperial hierarchy self-evident rather than argued. The images do not justify domination; they reorganize perception so that domination appears as coherence. In this sense, they resolve the contradiction embedded in hakkō ichiu not by exposing it, but by converting it into spatial form. This is the same logic the phrase performs in language: its claim to universality depends on a concealed center, and its promise of inclusion is inseparable from directional authority. The posters therefore do not merely illustrate the ideology—they complete it, stabilizing its contradictions as visual order.
+      </p><p class="zh">“八紘一宇”（hakkō ichiu）一语，字面意为“八方屋檐归于一宇”，官方常译为“世界一家”或“普世兄弟关系”，是日本帝国扩张意识形态的核心概念之一。该词源自古代史书《日本书纪》中据传由神武天皇提出的神话性宣言，20世纪初被民族主义思想家田中智学重新阐释，并在1940年近卫文麿的演讲中进一步政治化与大众化。该概念凝练出帝国意识形态中的双重逻辑：一方面宣称所有民族被纳入同一“屋檐”之下，实现普遍性的包容与平等；另一方面又在结构上将这一秩序的中心确立为日本自身。如当时的表述所言：“日本人与白种人是平等的，但对于亚洲诸民族而言，日本则充当其领导者。” </p><p class="zh">本文分析的四张宣传图像，正是这一概念的视觉转译。它们以图像形式再现了“八紘一宇”所内含的结构性张力：在表层语言中呈现解放与包容，在深层结构中嵌入等级与支配。四幅图像的共同特征并不在于具体意象的重复，而在于共享一种构图逻辑——通过空间组织将统治关系转化为秩序关系，使支配得以与“和谐”并存。在这一视觉体系中，政治关系被不断重构为位置、高度与排列方式的问题，而非直接的权力指令。垂直结构取代了显性命令，成为表达等级关系的主要方式：位置越高，越被赋予合法性；位置越低，则被重新定义为整体结构中的功能性组成部分。与此同时，集体场景通过协同行动、共享姿态或一致朝向，模糊了强制与参与之间的界限。即使在涉及暴力或征服的情境中，这种整合也消解了其冲突性，使不对称关系不再呈现为对抗，而被理解为统一体内部的分工与差异。</p><p class="zh"> 由此，这些视觉策略共同构成一种效果：帝国等级关系不再通过论证被说明，而是被直接呈现为“自明的秩序”。图像不试图说服观者接受统治的合理性，而是通过重组观看方式，使支配关系本身看起来即为结构合理性。在这一意义上，它们并非解释“八紘一宇”的矛盾，而是将其转化为空间形式，从而完成其视觉化。这正对应于该概念在语言层面的运作方式：其普遍性宣称始终依赖一个被遮蔽的中心，而其“包容”承诺本身也无法脱离方向性权力结构。由此，这些宣传图像并非仅仅对意识形态进行图解，而是在视觉层面完成其逻辑，将其内在张力稳定为一种可见的空间秩序。</p>
+    </div>
+  </div>
+</div>
+
+<!-- BROADER ANALYSIS -->
+<div class="divider"><span><span class="en-i">Thematic Analysis</span><span class="zh-i">主题分析</span></span></div>
+
+<section class="analysis-section">
+  <h2 class="en">"Asia for Asiatics" — The Slogan and Its Silences</h2>
+  <h2 class="zh">「亚洲是亚洲人的亚洲」——表与里</h2>
+   <p class="en">
+    The phrase that unified Japanese Pan-Asianist propaganda across audiences was deceptively simple: “Asia for Asiatics.” It invoked a language of racial and civilizational solidarity against Western colonialism that was genuinely resonant for populations subjected to British, Dutch, French, and American rule, often experienced as violent, extractive, and explicitly racialized. Yet the slogan depended on a constitutive silence: which Asiatics would define, lead, and ultimately benefit from the order it named.</p><p class="en"> Read as a corpus, the four posters in this archive construct an Asia that is plural in representation but singular in orientation: a constellation of liberated peoples who nonetheless move, as if by natural necessity, toward the sun of Japanese center. The ambiguity that structures each image—solidarity and hierarchy, liberation and domination, equality and paternalism—is not an inconsistency but the very mechanism of the ideology itself. The image can embed hierarchy through spatial arrangement while simultaneously asserting equality through shared gesture. Unlike language, which risks exposing contradiction when pressed, the visual field sustains it by distributing it across form.</p><p class="en">In this sense, Germer’s analysis of Japanese wartime aesthetics, Aydin’s intellectual history of Pan-Asianism, and Duara’s concept of “new imperialism” converge on a shared insight: the visual culture of the Greater East Asia Co-Prosperity Sphere cannot be reduced either to cynical manipulation or to betrayed idealism. Rather, it constitutes a historically specific formation in which both logics coexist in productive tension. It exploits, without resolving, the unstable relationship between anti-colonial aspiration and imperial ambition that structured Japan’s position in the early twentieth-century world order. The posters do not resolve this contradiction. They render it inhabitable.
+  </p>
+  <p class="zh">
+    在日本泛亚主义宣传中反复出现并贯穿不同受众的核心口号，是看似简单却极具穿透力的一句话：“亚洲是亚洲人的亚洲”。这一表述借助反对西方殖民主义的语言，唤起了一种基于种族与文明共同体的团结想象，对于长期遭受英国、荷兰、法国及美国殖民统治的地区而言，这种统治往往伴随着暴力、剥削与明确的种族等级，因此这一话语确实具有现实共鸣。然而，这一口号的成立依赖于一个结构性的沉默：究竟由哪一类“亚洲人”来定义、领导并最终受益于这一被命名的秩序。</p><p class="zh">从整体图像语料来看，本档案中的四幅宣传画共同建构出一种“多元面貌、单一方向”的亚洲想象：表面上呈现为民族与文化的多样性集合，实质上却是一种朝向单一中心的运动结构。无数“被解放的人民”被呈现为自然地、必然地汇聚于日本这一视觉中心。贯穿每一幅图像的结构性张力——团结与等级、解放与支配、平等与家长主义——并非设计失误或叙事矛盾，而正是意识形态得以运作的核心机制。图像能够通过空间布局内嵌等级关系，同时又借由共享姿态或共同表征维持表面平等；而语言在持续推演这一矛盾时往往会暴露其内在断裂，相较之下，视觉体系则通过形式分布使矛盾得以共存而不被拆解。</p><p class="zh">因此，格尔默（Germer）关于日本战时美学的分析、艾登（Aydin）对泛亚主义思想史的研究，以及杜阿拉（Duara）提出的“新帝国主义”概念在此形成交汇：大东亚共荣圈的视觉宣传体系，既不能简单归结为覆盖真实团结的冷酷操控，也不能视为被帝国扭曲的理想主义残余，而是一种更为复杂的历史结构——二者在其中以持续张力并存。它并未消解二十世纪初国际秩序中反殖民愿望与帝国扩张冲动之间的矛盾，而是以视觉形式将其加以承载与稳定。这些图像并不解决这一矛盾，而是栖居其中。
+  </p>
+</section>
+
+<!-- BIBLIOGRAPHY -->
+<section class="bib">
+  <div class="bib-in">
+    <h2>Primary Sources &amp; Archive Provenance</h2>
+    <p class="bib-e">Greater East Asia Co-Prosperity Sphere Map Poster. c. 1942. Cabinet Information Bureau, Imperial Japan. Encyclopædia Britannica Image Collection.</p>
+    <p class="bib-e">Co-Prosperity Sphere Propaganda Posters. c. 1942–44. Japanese Military Administration, Malaya. Peace Memorial Museum (和平纪念馆), Kuala Lumpur.</p>
+    <p class="bib-e">Anti-Chiang Kai-shek Propaganda Poster. c. 1938–42. DHI / AHRC Chiang Kai-shek Visual Archive, Artwork 10.</p>
+    <p class="bib-e">Japanese Propaganda Leaflet. 1944. Burma Theater. National Army Museum, London. Accession NAM. 2000-06-163-1.</p>
+    <p class="bib-e">Konoe Fumimaro, speech on the New Order in East Asia (1940).</p>
+    <h2 style="margin-top:2rem;">Secondary Sources</h2>
+    <p class="bib-e">Aydin, Cemil. <em>The Politics of Anti-Westernism in Asia.</em> Columbia University Press, 2007.</p>
+    <p class="bib-e">Duara, Prasenjit. "The New Imperialism and the Post-Colonial Developmental State." <em>The Asia-Pacific Journal</em> 2, no. 1 (2004).</p>
+    <p class="bib-e">Germer, Andrea. "Visual Propaganda in Wartime Japan." <em>Japan Forum</em> 25, no. 4 (2013): 475–509.</p>
+    <p class="bib-e">Culver, Annika A. <em>Glorify the Empire: Japanese Avant-Garde Propaganda in Manchukuo.</em> University of British Columbia Press, 2013.</p>
+    <p class="bib-e">Culver, Annika A. Glorify the Empire : Japanese Avant-Garde Propaganda in Manchukuo. University of British Columbia Press, 2013.</p>
+    <p class="bib-e">Smith, Norman. Resisting Manchukuo : Chinese Women Writers and the Japanese Occupation. University of British Columbia Press, 2007.</p>
+  </div>
+</section>
+
+<footer>HIST 343H · Primary Source Archive · The Doubled Edge: Pan-Asianism, Racial Ideology, and the Art of Ambiguity</footer>
+
+<!-- ═══════════ MODALS ═══════════ -->
+
+<!-- M1 -->
+<div class="modal-overlay" id="m1" onclick="bgClose(event,this)">
+  <div class="modal"><button class="modal-close" onclick="closeModal(&#39;m1&#39;)">✕</button>
+    <div class="modal-grid">
+      <div class="modal-img"><img src="images/Poster1.png" alt="Co-Prosperity Sphere Map"><span class="modal-img-credit">Encyclopædia Britannica</span></div>
+      <div class="modal-text">
+        <div class="modal-ex">Exhibit 01 / 04</div>
+        <h2 class="modal-title en">Propaganda Map of the Greater East Asia Co-Prosperity Sphere</h2>
+        <h2 class="modal-title zh">大东亚共荣圈宣传地图</h2>
+        <div class="modal-meta en">c. 1942 · Cabinet Information Bureau, Imperial Japan · Encyclopædia Britannica Collection</div>
+        <div class="modal-meta zh">约1942年 · 日本帝国内阁情报局 · 大英百科全书馆藏</div>
+        <div class="modal-tags"><span class="tag tgold"><span class="en-i">Authority Replacement</span><span class="zh-i">权威替代</span></span><span class="tag trust"><span class="en-i">Cartographic Rhetoric</span><span class="zh-i">视觉隐喻</span></span></div>
+
+        <div class="desc-block">
+          <h4><span class="en-i">What Is Depicted</span><span class="zh-i">图像描述</span></h4>
+          <p class="en">This densely composed propaganda piece operates as a comprehensive visual narrative of Japanese imperial ascendancy, structured around a fundamental opposition between the destruction of a corrupt Western order and the joyful construction of a new, Japan-led Asia.</p> <p class="en"> The eye is first drawn to the central, repeated motif of flag replacement: across the geographical sweep of China and Southeast Asia, the tattered and broken emblems of the Dutch East India, the United Kingdom, and the United States are being physically cast aside and supplanted by the clean, rising sun flag of Japan. Moreover, this is not depicted as a hostile takeover but as a ceremonial transfer of power, its legitimacy visually endorsed by the local figures who are shown actively holding and waving the new Japanese flags. </p> <p class="en">The Japanese military itself is depicted through a visual duality that organizes the frame. In one mode, directed exclusively against the West, it is a force of overwhelming and humiliating power, with soldiers shown expelling Western troops, guarding American prisoners of war (in Phillipine), and crushing them completely, while coordinated air power destroys a fortress in China. In a starkly contrasting second mode, oriented toward Asia, the Japanese soldier is a figure of benevolent liberation, celebrating with local populations, exchanging gifts with children, and standing shoulder-to-shoulder as a comrade and protector. This terrestrial triumph is mirrored at sea, where the Japanese navy cruises serenely past sinking British and American ships.</p> <p class="en"> The entire visual argument is sealed by the placement of two figures in the composition’s margins: Franklin D. Roosevelt and Winston Churchill are squeezed into a corner, stripped of power and agency, their reluctant postures confirming that their era of influence is definitively over and that they can only observe the triumphant new order from the periphery.</p>
+          <p class="zh">这幅构图密集的宣传画是一部关于日本崛起的全景叙事，其结构立于一组对立之上：一边是腐败西方秩序的崩溃，另一边是一个由日本领导的新亚洲秩序的建立。</p><p class="zh">旗帜更替的场景反复出现：在中国和东南亚的版图之上，破烂断裂的荷兰东印度公司、英国和美国的旗帜被并被日本太阳旗所取代。中日战争与太平洋战争通过视觉语言被描绘成一次仪式性的秩序重建和权力交接而非一场充满敌意的入侵。</p><p class="zh">在画面中，日本军队有着两种形象。在第一种模式中，它仅针对西方，表现为一股压倒性的、羞辱性的绝对力量：士兵们驱逐西方军队、看守美国战俘、嘲笑溺水的西方士兵，同时协同空中力量摧毁了中国的要塞。形成鲜明对比的，在第二种模式中，面对亚洲的“同胞”，日本士兵则化身为仁慈的解放者，与本地民众一同庆祝，与儿童交换礼物，如同志和保护者般并肩而立。陆地上的胜利在海洋上得到了呼应，日本海军巡航于下沉的英美船只之旁。</p><p class="zh">画面边缘的两个人物的更进一步完成了论述：富兰克林·D·罗斯福与温斯顿·丘吉尔被挤压在一个角落里，不情愿地看着他们所主宰的时代已彻底终结，如今只能在边缘旁观这一胜利的新秩序。</p>
+        </div>
+
+        <div class="desc-block">
+          <h4><span class="en-i">Audience &amp; Purpose</span><span class="zh-i">受众与信息</span></h4>
+          <p class="en">Produced by the Cabinet Information Bureau for domestic Japanese consumption and for distribution across occupied territories. This image functions as a multi-layered act of persuasion, made to deliver distinct but complementary messages to a dual audience. </p>
+ <p class="en">The primary audience is unequivocally the Japanese child on the home front, and the information conveyed is a foundational lesson in national identity and moral vision. The image is a pedagogical tool designed to answer a child's implicit questions: What is my country doing in this distant war? Is our cause just? Should I be proud? The visual cues provide clear, emotionally saturated answers. The flag-replacement motif teaches that Japan is not invading but inheriting—taking over a bankrupt colonial order and replacing it with something purer. The bifurcated depiction of the Japanese soldier, merciless to the enemy, gentle to fellow Asians—constructs, constructed a moral universe in which Japanese violence is never indiscriminate, but precisely and righteously applied. The gift-giving scene with local children teaches the Japanese child that their nation's power is paternal rather than predatory, that Japanese soldiers are loved and welcomed, and that the natural order of the world places Japan in the role of benevolent elder sibling. The marginalized Roosevelt and Churchill serve as a reassurance that the great enemies Japan faces are already defeated in spirit, reduced to figures of ridicule. The figure shapes the perception among the kids: your nation is not an aggressor; it is a liberator, a builder, and a guiding light. </p> <p class="en">For its audience in the occupational territory, the propaganda conveys a single, powerful narrative: the Western imperialists are gone forever, and the only viable future is one of proud and joyful participation in a Japanese-led community. The visual cues are meticulously orchestrated to make this argument appear not as rhetoric but as a reflection of undeniable reality. The master metaphor of the flag exchange reframes military conquest as a legitimate transfer of sovereignty, transforming a broken colonial symbol into a liberated, pan-Asian future, while the participation of locals in raising the Japanese flag erases the reality of coercion and fabricates an image of popular will. The juxtaposition of Japanese soldiers in combat against the West and in harmony with Asian civilians establishes a definitive "before and after" for the occupied territories, also constructing the narrative that the violence of the empire is surgically precise, directed with brutal force at a common racial enemy but transformed into fraternal gentleness toward fellow Asians, positioning the Japanese military as both an invincible protector and a benevolent elder brother. </p>
+          <p class="zh">该图像作为内阁情报局制作的官方宣传品，其分发范围涵盖日本国内与各占领区，在受众策略上呈现出明确的双重面向，对两类观者传达彼此独立却又相互支撑的信息体系。</p> <p class="zh">对日本国内的儿童受众而言，该图像承载的是一套国家认同的启蒙教育功能。战时体制下的儿童对战况的理性认知有限，其内心所面临的是一系列更为根本的追问：我的国家在这场遥远的战争中扮演何种角色？我们的事业是否具有正义性？我是否应当为此感到自豪？该图像以高度情感化的视觉语言对此给出了完整回答。旗帜更替的母题传递的核心信息是：日本并非在进行一场侵略战争，而是在继承一个业已破产的殖民体系，并以更为纯粹的新秩序取而代之。日本士兵被分裂式描绘的两种形象——对敌人冷酷无情，对亚洲同胞温和亲切：为儿童观众建构起一个清晰的道德二元框架。在这一框架中，日本的暴力不是无差别的，而是被严格限定于正义对象的精准施加。与当地儿童交换礼物的场景将权力关系彻底家庭化、亲情化：国家力量在此被呈现为父兄式的保护与馈赠，而非征服性的压迫与掠夺。被边缘化的西方领导人形象则完成了对敌方力量的去威胁化处理，将罗斯福与丘吉尔从势均力敌的对手转化为可被俯视的滑稽角色，以此消解儿童对战争的恐惧。所有视觉要素的累积效应在于塑造一种深层的认知结构：日本不是侵略者，而是亚洲的解放者、建设者与引路人。</p> <p class="zh">对占领区受众而言，同一图像传达的则是一套更为直接的政治叙事：西方帝国主义势力已被永久驱逐，唯一具备现实可能性的未来在于骄傲而欣然地加入日本主导的亚洲共同体。旗帜更替在此作为核心隐喻发挥了更为隐蔽的意识形态功能——它将炮火之下的军事占领重新定义为一次合法的主权转移，将殖民废墟的清扫包装为亚洲人的集体翻身。本地民众挥旗的场面即是专门为占领区观者设置的镜像：它试图以视觉化的"民意"来消解被殖民者对占领政权的抵触，通过呈现"同胞已然接受"的画面施加从众性的心理暗示。日本士兵对西方的凶狠与对亚洲的温和之间的对比，则为占领区受众规定了叙述自身处境的根本框架：过往的苦难归于西方殖民者，当下的保护归于日本军事力量。暴力的施加被精确地重新划定为必要的防卫，占领的实质被柔化为兄弟间的合作。</p>
+        </div>
+
+        <div class="modal-body">
+          <p class="en">This image operates as a near-perfect visual embodiment of the core argument that has emerged from the research: Japanese imperial propaganda achieved its power not by clumsily concealing a contradiction between liberation and hierarchy, but by weaving these elements into a single, seamless ideological fabric. While the image served a dual function, persuading occupied populations of the irreversibility of Japanese rule while simultaneously constructing a moral self-portrait for domestic consumption, its primary pedagogical address was directed at the Japanese child, for whom it functioned as a foundational lesson in national identity. Each layer of the analytical framework is exemplified in its visual logic. </p> <p class="en">Aydin's insight that Pan-Asianism constituted a serious counter-vision to the Western-dominated international order is rendered through the systematic and ritualized desecration of Western state symbols: broken flags, sinking ships, and humiliated leaders are not merely criticized but visually supplanted by an ascendant Japanese order, and the child is taught not that Japan is fighting a war but that it is inaugurating a new historical epoch. </p> <p class="en">Duara's concept of the "new imperialism" finds equally precise visual articulation. The entire narrative structure frames Japanese military action as a war of expulsion against Western imperialism, absorbing the moral energy of anti-colonial sentiment, yet the endpoint of this liberation is not independence for the former colonies but their immediate and total incorporation into a Japanese-centered hierarchy. The local figures who wave the rising sun flag are the visual proof that liberation and submission to Japanese authority are, within this framework, one and the same act. </p> <p class="en">At its deepest operational level, the image demonstrates the mechanism of "productive ambiguity" that this research has identified as central to propaganda's cognitive hold. The stark juxtaposition of brutal military violence against Western enemies and idyllic inter-Asian harmony is not an inconsistency to be resolved but a deliberately maintained structural division that organizes the child's moral perception: violence and benevolence are assigned to entirely separate categories of recipient, so the child is never prompted to experience them as contradictory. Occupation is thereby redefined as fraternal guidance, resource extraction is aestheticized into the generosity of gift exchange, and a violent hierarchy is recast as a natural family order with Japan installed in the position of protective and wise elder sibling. The image does not, in the end, ask the child to believe a specific lie; it provides the child with an entire interpretive apparatus through which domination appears as generosity, and the war appears already won: not only on the battlefield but in the moral structure of the world itself. </p> <p class="en">The figures of Roosevelt and Churchill, squeezed and diminished in the margins, are the final, indispensable element of this apparatus: they are positioned not as enemies to be feared but as a superseded past to be regarded with pity, a compositional choice that manufactures the child's emotional response in advance and thereby secures the image's deepest ideological achievement: making Japanese imperial aggression seem not aggressive at all, but inevitable, natural, and morally beyond question.</p>
+          <p class="zh">从本研究所形成的分析框架审视，该图像是核心论点的关键视觉证据。它印证了如下判断：日本帝国宣传的有效性并非来源于对解放与等级制之间矛盾的笨拙掩饰，而是来源于将这两者整合进一个相互支撑、不可分割的意识形态统一体，并将这一统一体同时用于教化国内民众与规训占领区人口。此即"生产性模糊"的运作机制：矛盾不被消除，而是被有意维持，并在这种维持中产生强大的说服效力。</p> <p class="zh">杰米尔·艾丁关于泛亚主义构成了一种严肃的、针对西方主导世界秩序的替代性愿景的论点，在该图像中获得了最为直接的视觉转译。画面中对西方国家象征物的系统性的亵渎——破碎的国旗、沉没的军舰、被边缘化的西方领导人——并非粗浅的仇恨宣传，而是一场在世界舞台上演的象征性权力交接仪式。它告知观者：西方主导的历史篇章已经终结，日本领导下的亚洲正在书写新的纪元。</p> <p class="zh">普拉森吉特·杜阿拉的"新帝国主义"概念同样在该图像中获得了精确的视觉表达。整幅作品的叙事驱动力来自对西方帝国主义势力的驱逐，并将战争界定为一场解放性质的正义之战。然而，解放的终点并非真正的主权独立，而是旗帜的即时替换。西洋旗的坠落与太阳旗的升起之间，不存在任何允许自主选择的空间。亚洲民众对西方殖民主义的愤怒情绪被吸收、被引导，最终被导向对新帝国秩序的认同。画面中完全不存在横向的平等关系：日本士兵是举旗者、沉船者、赠礼者；亚洲本地民众则是接旗者、被保护者、受礼者。等级制并未被消除，而是通过"合作""共荣"等修辞被重新定义和自然化。</p> <p class="zh">该图像最深层的运作逻辑在于其对双重受众的同时规训。对日本国内儿童，它呈现的是一个被解放者所爱戴的仁慈帝国的自画像；对占领区民众，它呈现的是一幅旧秩序已逝、新秩序已至且已获同胞接受的既成事实图景。这两套信息互为镜像、彼此印证，在各自受众的认知中构成闭环。这正是该宣传品最为精密的构造之处：它并非通过直接撒谎来欺骗观者，而是提供了一整套观看世界的方式——在这一观看框架之内，帝国的暴力变得体面，军事占领变得温情，而森严的等级制则变得如同家庭伦理一般自然且不可置疑。</p> <p class="zh">罗斯福和丘吉尔蜷缩在边缘的图像构成了该宣传画最后一层含义：西方殖民主义依然不是值得畏惧的敌人，而是让人鄙夷的过去。这一宣传将日本的入侵在叙事上转变为为一种必然，自然，道德的行动，而这也是本图最为重大的意识形态功能。
+
+</p>
+        </div>
+        <div class="modal-src"><a href="https://www.britannica.com/topic/Greater-East-Asia-Co-prosperity-Sphere" target="_blank">↗ View at Encyclopædia Britannica</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- M2 -->
+<div class="modal-overlay" id="m2" onclick="bgClose(event,this)">
+  <div class="modal"><button class="modal-close" onclick="closeModal(&#39;m2&#39;)">✕</button>
+    <div class="modal-grid">
+      <div class="modal-img"><img src="images/Poster2.jpg" alt="Modernist Occupation Poster"><span class="modal-img-credit">Peace Memorial Museum, Kuala Lumpur</span></div>
+      <div class="modal-text">
+        <div class="modal-ex">Exhibit 02 / 04</div>
+        <h2 class="modal-title en">大東亜共栄会議 (Dai Tōa Kyōei Kaigi) — Greater East Asia Conference.</h2>
+        <h2 class="modal-title zh">大东亚共荣会议</h2>
+        <div class="modal-meta en">c. 1943 · Japanese Military Administration, Malaya · Peace Memorial Museum, Kuala Lumpur</div>
+        <div class="modal-meta zh">约1943年 · 日本军政当局，马来亚 · 马来西亚和平纪念馆</div>
+        <div class="modal-tags"><span class="tag trust"><span class="en-i">Pan-Asian Propaganda</span><span class="zh-i">泛亚宣传</span></span><span class="tag tgold"><span class="en-i">Hierarchy under "Equality"</span><span class="zh-i">“平等”下的阶层</span></span></div>
+
+        <div class="desc-block">
+          <h4><span class="en-i">What Is Depicted</span><span class="zh-i">图像描述</span></h4>
+          <p class="en">This wartime cartoon organizes the Greater East Asia Co-Prosperity Sphere around a circular table, transforming the 1943 Greater East Asia Conference into an exhibition of designated economic roles. Each seated figure wears an armband identifying their nation or territory. Before each delegate, placed directly on the table surface, are the specific resources their region contributes to the collective. Japan, represented by a uniformed military figure seated near the compositional center, provides battleships, tanks, and steel: the instruments of industrial warfare. Manchukuo contributes coal and soybeans. China, under the Wang Jingwei collaborationist regime, offers iron. The Southeast Asian delegates, representing the Philippines, Burma, the Dutch East Indies, and Malaya with varying degrees of ethnographic caricature, bring oil, tin, and rubber, the strategic materials that drove Japan's southern expansion. Each delegate's posture gestures toward or touches the resources before them, a choreography of voluntary offering. Behind the gathering, mounted on the wall, a map delineates the envisioned Sphere as a geographically coherent, self-sufficient bloc sealed off from Anglo-American influence. In the background, through a half-open door, two additional figures are entering. Japanese text identifies them as an Indian and an Australian Aboriginal man who are "waking up" to their identity as East Asians and coming to join the conference. Their position at the threshold, neither fully inside nor entirely outside, marks them as peoples in the process of incorporation into Japan's pan-Asian vision.</p>
+          <p class="zh">这幅战时漫画将大东亚共荣圈组织在一张圆桌周围，将1943年大东亚会议转化为一场指定经济角色的展示会。每位就座者臂上佩戴标明其国家或地区的臂章。在每位代表面前的桌面上，直接陈列着其所在地区向集体贡献的特定资源。日本，由一名居于构图中心附近的军装军人代表，提供战舰、坦克与钢铁:工业战争的工具。满洲国贡献煤炭与大豆。汪精卫合作政权治下的中国提供铁。东南亚代表——对应菲律宾、缅甸、荷属东印度与马来亚——带来石油、锡与橡胶，这些正是驱动日本南进扩张的战略性原料。每位代表的姿态均朝向或触碰着面前的资源，一套自愿呈献的动作。在集会背后的墙上，悬挂着一幅地图，将共荣圈的设想疆界描绘为一个地理上连贯、与英美影响隔绝的自给自足集团。在背景处，通过一扇半开的门，另有两名人物正步入室内。日文文字说明他们是一名印度人与一名澳大利亚原住民，正在"觉醒"于自身的东亚人身份，前来参加会议。他们位于门槛上的位置——既不完全在内，亦未完全在外——标志着他们正处于被纳入日本泛亚愿景的过程之中。</p>
+        </div>
+
+        <div class="desc-block">
+          <h4><span class="en-i">Audience &amp; Purpose</span><span class="zh-i">受众与目的</span></h4>
+          <p class="en">The primary audience for this cartoon was the literate Japanese urban public: readers of state-controlled magazines and newspapers during the height of the Pacific War. To this audience, the image delivered a multi-layered argument about the nature and legitimacy of Japan's imperial project. The most immediate message concerned economic rationality: the Co-Prosperity Sphere was not an apparatus of extraction but a system of complementary exchange. The Japanese viewer, likely experiencing wartime rationing and material shortages, was shown a vision of abundance made possible by imperial integration: coal from Manchuria, iron from China, oil and rubber from the south, all flowing toward a collective center. </p> <p class="en">The second message concerned hierarchy, communicated through the neutral language of functional differentiation. Japan's contribution (battleships, tanks, and steel) was qualitatively different from the raw materials offered by other members. This superiority was presented as a natural division of labor: each nation gives what it has, and Japan, as the most industrially advanced, provides the military protection that binds the Sphere together. Note that the armbands that identified each delegate formalized this functional differentiation, assigning each member a clear, legible role within the collective. </p> <p class="en">The third and most ideologically ambitious message concerned the expansive logic of Pan-Asian identity itself. The Indian and Aboriginal figures entering through the doorway were not presented as conquered subjects but as peoples in the process of awakening to their true racial identity. This was an act of reclassification: an Indian, traditionally categorized in Western racial science as Aryan, and an Australian Aboriginal person, placed at the bottom of colonial hierarchies, were both being invited into "Asianness" under Japanese auspices. The half-open door signaled that their incorporation was underway but not yet complete: a future-oriented promise that the Sphere's growth was ongoing and its logic irresistible.</p>
+          <p class="zh">这幅漫画的首要受众是识字的日本城市公众：太平洋战争高峰时期由国控媒体的读者。对此受众而言，图像传递了一套关于帝国事业之性质与合法性的多层次论证。最重要的信息直接关乎经济：大东亚共荣圈并非压迫性的殖民体系，而是一套互惠系统。这将一副潜在的，由亚洲整合所驱动的，繁荣未来展示给正经历战时配给与物资匮乏的日本读者：满洲的煤炭、中国的铁、南方的石油与橡胶，皆向一个中心汇聚流淌。</p> <p class="zh">第二重信息关乎等级并经由分工这一看似中立的语言加以传达。日本的贡献——战舰、坦克与钢铁——在性质上与其他成员提供的原材料截然不同。这一优越性被呈现为一种自然的分工：每个民族贡献其所有，而日本作为工业化国家，提供将共荣圈联结为一体的军事保护。</p> <p class="zh">第三重、也是意识形态层面最为野心勃勃的一则信息，则是泛亚认同的扩张逻辑。门口的印度人与原住民人物并非被呈现为被征服者，而是正处于觉醒于自身真实种族身份过程之中的群体。这是一次有趣的的种族重定义：在西方种族科学中被归类为雅利安人的印度人，以及被置于殖民等级最底层的澳大利亚原住民，均在日本的庇护下被邀请进入"亚洲"。半开的门发出信号，表明他们的纳入正在进行但尚未完成。这是一项面向未来的承诺：共荣圈的成长仍在持续且不可抗拒。
+
+</p>
+        </div>
+
+        <div class="modal-body">
+          <p class="en">This duality—liberationist rhetoric and hierarchical structure operating in the same visual frame—is precisely the phenomenon this project investigates.
+Aydin's argument that Pan-Asianism constituted a serious alternative vision of world order is reflected here through the positive construction of an autonomous economic geography: the wall map presents the Sphere as a sealed space that no longer requires the West for anything. This is the promise of liberation made cartographic. Duara's "new imperialism" then explains what happens inside that sealed space. The language of anti-colonial cooperation is appropriated and redirected: each nation "contributes" freely, but the structure of contribution reproduces the colonial division between industrial metropole and resource periphery. The armbands that signal equal nationhood simultaneously designate economic function, fixing each member in a role that naturalizes subordination within the very act of recognizing sovereignty. Liberation and hierarchy are not in tension; they are two faces of a single ideological operation. Zhong Yijang's work on spatial ideology reveals the deep-layer architecture of this image and connects it most directly to the racial logic under examination. </p> <p class="en">Zhong demonstrates that Japan's imperial imagination organized geography along developmental gradients long before wartime propaganda made them explicit. The domestic landscape itself was divided into the modern "frontside" (omote Nihon) facing the Pacific and the backward "backside" (ura Nihon) facing the continent: a spatial hierarchy that cast uneven development as a natural geographic fact. When imperial expansion accelerated after 1931, this pre-existing domestic hierarchy was projected outward onto the empire, providing a ready-made cognitive map for positioning Japan as superiority in regard of the relationship with the territories it now controlled. </p> <p class="en">The resource table is a precise expression of that cognitive projection. Each nation's position corresponds not to its political sovereignty but to its location on a developmental gradient rehearsed within Japan's own borders. At the center sits Japan, contributing the products of advanced industry: the same modern sector associated with the Pacific "frontside." Arrayed around it are nations marking progressively diminishing industrial complexity: from semi-industrial extraction in Northeast Asia to purely extractive provision of tropical commodities from Southeast Asia. These latter territories occupy the structural position of the "backside,"zones whose value lies in the raw materials they yield, not in the industrial capacity they possess. </p> <p class="en">The Indian and Aboriginal figures at the door represent the furthest extension of this gradient. They bring nothing to the table because they are still being incorporated into a developmental order whose coordinates were fixed before they arrived. Their "awakening" to East Asian identity is, in Zhong's framework, incoporation into an imagination of spatial-developmental hierarchy in which "Asia" is not a geography of equals but a graduated field of uneven capacity requiring Japanese leadership. Their racial reclassification as "East Asians" therefore naturally assigned them a position within a vertical order of development. </p> <p class="en">This is the duality that "productive ambiguity" attempts to resolve. The image sustains both the round table's promise of equality and the resource display's insistence on hierarchy, deriving its persuasive power from their coexistence. The Japanese viewer is given a framework in which domination appears as guidance, extraction as contribution, and racial hierarchy as developmental sequence. The Indian and the Aboriginal Australian are not being subordinated; they are being developed. Japan is not exploiting Asia; it is organizing it along a gradient whose endpoint it already occupies and toward which it now leads others. The image's deepest argument is about time: Asia is not a space of simultaneous equals but a temporal sequence, and Japan is simply the forerunner and the first to arrive at the future. </p>
+          <p class="zh">叙事的双重性——解放与等级结构在同一视觉框架中运作——正是本项目所考察的核心现象。艾丁关于泛亚主义创建了另一种世界秩序的愿景的论点，在此并非通过驱逐西方象征，而是通过一个自主经济/地理空间的积极建构而呈现：墙上的地图将共荣圈展示为一个不再需要西方的封闭空间。这是可视的解放承诺。杜阿拉的"新帝国主义"继而解释了在这一封闭空间内部所发生之事。反殖民合作的语言被挪用并转向：各国"自愿"贡献，但贡献的结构再现了工业宗主国与资源边缘地之间的殖民分工。标识平等国家身份的臂章同时充当经济功能的名牌，在承认主权的同一行为中将每个成员固定于一个将从属地位自然化的角色之中。解放与等级制并非对立之中；它们是同一场意识形态操作的两副面孔。</p> <p class="zh">钟易江关于空间意识形态的研究揭示了该图像的深层架构，并将其与本项目所考察的种族逻辑最为直接地连接起来。钟证明，日本的帝国想象早在战时宣传将其明确化之前就已沿着发展梯度来组织，想象地理空间。日本被划分为面向太平洋的现代"表面"（omote Nihon）与面向大陆的落后"背面"（ura Nihon）：这一空间等级将不均衡发展塑造为自然的地理事实。当帝国在1931年后加速扩张时，原先的国境内的等级制被投射到帝国之外，为组织日本与其所控领土之间的关系提供了一张现成的认知地图。桌上资源的展示正是向外投射的精确表达。每个国家在桌旁的位置对应的并非其政治主权，而是其在发展梯度上的位置。居于中心的是日本，贡献着先进工业的产品：正是与太平洋"表面"相关联的现代部门。环绕其周围的是逐渐“落后”的国家：从东北亚的半工业制成品到东南亚的原材料。后一类领土在帝国想象中占据着"背面"的结构性位置：其价值在于其所产出的原材料，而非其所拥有的工业能力。</p> <p class="zh">门口的印度人与原住民代表了这一梯度向最远端的延伸。他们尚未贡献，因为他们正在被纳入一个其席位早在他们到来前便被固定的发展秩序中。在钟的理论中，二者东亚身份的"觉醒"正是源于其被这一空间—发展等级制框架的整合。在这一等级制中，"亚洲"并非由平等构成的地理空间，而是一个发展能力不均、需要日本领导的梯度场。他们作为"东亚人"的种族重新分类因此将他们分配至一个垂直体系中。</p> <p class="zh">这正是"生产性模糊"所命名的双重性。该图像同时维持着圆桌的平等承诺与资源陈列的等级制，从两者的共存中汲取其说服力。日本观者被赋予了一个框架：支配显现为引导，榨取显现为贡献，种族等级制显现为发展序列。印度人与澳大利亚原住民并非在被支配；他们在被发展。日本并非在剥削亚洲；它在沿着一条其自身早已占据终点、如今正引领他人前往的梯度来组织她。该图像的使读者重新思考时间与空间：亚洲并非，或者说并不止，一个由同时代人所构成的空间，而是一个发展的时间序列，日本是其中的先行者。</p>
+        </div>
+        <div class="modal-src"><a href="https://peacememorial.my/%e5%a4%a7%e6%9d%b1%e4%ba%9a%e5%85%b1%e8%8d%a3%e5%9c%88/" target="_blank">↗ View at Peace Memorial Museum</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- M3 -->
+<div class="modal-overlay" id="m3" onclick="bgClose(event,this)">
+  <div class="modal"><button class="modal-close" onclick="closeModal(&#39;m3&#39;)">✕</button>
+    <div class="modal-grid">
+      <div class="modal-img"><img src="images/Poster3.png" alt="Anti-Chiang Poster"><span class="modal-img-credit">DHI / AHRC Chiang Kai-shek Archive</span></div>
+      <div class="modal-text">
+        <div class="modal-ex">Exhibit 03 / 04</div>
+        <h2 class="modal-title en">"East Asian Peace; Down with the Nanjing Regime!"</h2>
+        <h2 class="modal-title zh">“东亚和平；打倒南京政府！”</h2>
+        <div class="modal-meta en">c. 1937 · Back cover of children's book Wo de huaji (我的畫集) · DHI / AHRC Chiang Kai-shek Visual Archive, Artwork 10</div>
+        <div class="modal-meta zh">约1937年 · 名为《我的畫集》的儿童读本封面 · DHI / 英国人文艺术研究委员会蒋介石视觉档案，作品10</div>
+        <div class="modal-tags"><span class="tag tred"><span class="en-i">Enemy Construction</span><span class="zh-i">敌人的建构</span></span><span class="tag trust"><span class="en-i">Intra-Asian Division</span><span class="zh-i">“泛亚的裂痕”</span></span></div>
+
+        <div class="desc-block">
+          <h4><span class="en-i">What Is Depicted</span><span class="zh-i">图像描述</span></h4>
+          <p class="en">This propaganda poster, printed on the back cover of a children's picture book around 1937, organizes its visual argument along a diagonal axis ascending from lower left to upper right. The composition establishes four distinct tiers, each occupying a specific spatial and symbolic position. At the lowest level, crumpled at the bottom of the frame, lies a stylized caricature of Chiang Kai-shek: seeing stars, body collapsing, and expelled from the order being constructed above him. Occupying the central and largest space is the figure of a Japanese soldier. His scale dwarfs every other element in the composition. His right fist drives downward in the direction of Chiang, while his left arm extends upward and outward, curving protectively around a cluster of figures positioned above and behind him. This third tier consists of civilians, men, women, elderly, and children, who laugh and wave two flags: the Japanese rising sun and the five-color flag of the early Chinese Republic. Alongside the humans stand production animals, a horse and a pig, whose presence ties the scene to agricultural prosperity and everyday wellbeing. These figures are rendered significantly smaller than the soldier. At the highest level, above all other elements and radiating light across the scene, hangs the sun: a visual echo of the Japanese flag that simultaneously evokes the natural order of the cosmos. The diagonal progression is clear: from defeated enemy at the bottom, through protective soldier at the center, to grateful civilians in the upper register, and finally to the radiant sun that sanctifies the entire arrangement from above.</p>
+          <p class="zh">这幅印制于约1937年儿童画册封底的宣传海报，将其画面沿一条对角线展开。画面建立起四个清晰的层级，每一层占据着一个特定的空间与象征位置。在最底层，蒋介石的形象瘫倒着：眼冒金星，身体扭曲，在新秩序中毫无立足之地。占据中央及最大空间的是一个日本士兵的形象。其体量将其他元素衬得渺小。他的右拳向蒋介石所在的方向挥下，而左臂则向上、向外伸展，保护性地环绕着一群位于其身后的人物：位于第三层的平民：男人、女人、老人与儿童。他们欢笑着挥舞着两面旗帜：日本太阳旗与中华民国早期五色旗。与人类并立的是牲畜，一匹马与一头猪，将这一场景与农业繁荣及日常福祉联系在一起。在最上一层，凌驾于所有其他元素之上并将光芒辐射至整个画面的是一轮太阳——日本国旗的视觉象征，同时加深观众对泛亚秩序的想象。这条对角线的递进关系非常显著：从底部溃败的南京政府，经中央的爱民士兵，到感恩的民众，最后抵达那轮“神圣的“太阳。
+
+</p>
+          <div class="text-translation">
+            <strong><span class="en-i">Text on Poster (translated)</span><span class="zh-i">宣传画文字（翻译）</span></strong>
+            <span class="en">"East Asian Peace (东亚和平); Down with the Nanjing Regime! (打倒南京政府！)"</span>
+            <span class="zh">“东亚和平；打倒南京政府”</span>
+          </div>
+        </div>
+
+        <div class="desc-block">
+          <h4><span class="en-i">Audience &amp; Purpose</span><span class="zh-i">受众与信息</span></h4>
+          <p class="en">The poster has a dual audience of both Japanese and Chinese children, which shapes the image's persuasive strategy. For the Japanese child, the poster delivers a lesson in national identity and moral vision identical in function to the Cabinet Information Bureau map analyzed earlier: the Japanese soldier is a hero, his violence is righteous, and the peoples of Asia welcome his protection. The child learns that Japan's war in China is not an invasion but a rescue mission, and that the natural order of the world places Japan in the role of leading and protective elder sibling.</p>
+<p class="en">For the Chinese child, the presence of the five-color flag (the banner of the early Chinese Republic before Chiang Kai-shek's ascendancy) signals that Japan does not seek to erase Chinese national identity but to restore it to a purer, pre-Chiang form. The laughing civilians, the productive livestock, and the protective Japanese soldier together construct a vision of what submission to the new order promises: peace, prosperity, and the preservation of community. The Chinese child is being taught that resistance is not only futile but unnecessary, that the enemy is not Japan but Chiang Kai-shek, and that the Japanese soldier is not a conqueror but a protector whose embrace already includes Chinese people alongside Japanese. Japanese and Chinese flags stand side by side beneath the same radiant sun, portraying both nations as co-participants, though not necessarily equals, in a shared Pan-Asian future.</p>
+          <p class="zh">这张海报同时面向日本与中国儿童，这一双重受众决定了其宣传策略。对于日本儿童而言，海报传达的是一种国家认同与道德使命的教育功能，其作用与前文所分析的内阁情报局地图相似：日本士兵被塑造成英雄形象，其暴力被描绘为正义之举，而亚洲人民则被表现为欢迎其保护。儿童由此被灌输这样一种观念：日本在中国的战争并非侵略，而是“救援行动”；世界的自然秩序则赋予日本以领导者与保护性“长兄”的角色。</p><p class="zh">对于中国儿童而言，画面中出现的五色旗，即蒋介石崛起前中华民国早期的国旗，暗示日本并非要消灭中国的民族认同，而是要将其恢复为一种据称更“纯正”的前蒋时代形态。欢笑的平民、繁盛的牲畜，以及承担保护者角色的日本士兵，共同构建出一种服从新秩序后的愿景：和平、繁荣与社区的延续。中国儿童被引导相信，抵抗不仅徒劳，而且毫无必要；真正的敌人不是日本，而是蒋介石政权；日本士兵也并非征服者，而是保护者，中国人与日本人被一并纳入其怀抱。日本与中国国旗并列于同一轮放射光芒的太阳之下，将两国描绘为共同参与泛亚洲未来的成员，尽管彼此并非真正平等。</p>
+        </div>
+
+        <div class="modal-body">
+          <p class="en">This poster distills the ideological operation examined in this project into its most elemental visual form. Its composition reduces the duality of liberation and hierarchy to a single diagonal structure spanning four ascending tiers. The diagonal itself thus becomes the governing logic of the image: it organizes the world into a graded sequence moving from defeat and exclusion at the bottom, through protection and reconstruction in the middle, to gratitude and prosperity above, and finally to a transcendent, universalized form of sanction at the apex. The child viewer, whether Japanese or Chinese, is not invited to question this hierarchy but to locate themselves within it.</p> <p class="en">Notably, the poster does not represent Japan as conquering China. Rather, it depicts Japan as removing a specific political obstacle, the Nanjing government, that stands between the Chinese people and their rightful place within a Japanese-led Asian order. The five-color flag functions as a crucial symbolic device: by appropriating the banner of the early Chinese Republic prior to Chiang Kai-shek’s ascendancy, the image positions Japan as the restorer of Chinese sovereignty rather than its antagonist. In this sense, the language of anti-colonial liberation is appropriated and redirected: the enemy is not China as a people or nation, but the Chiang Kai-shek regime, framed as an internal obstruction to China’s own emancipation. This visual logic reflects how the Co-Prosperity Sphere presents itself as a legitimate post-Western order in which Asian nations recover their authentic identities under Japanese leadership, while the soldier’s gesture simultaneously reads as protection and domination, with no stable visual grammar to distinguish between the two.</p> <p class="en">The diagonal four-tier structure also encodes a developmental hierarchy central to Japan’s imperial spatial imagination. As Zhong demonstrates, Japan’s domestic geography was historically conceptualized as a gradient between a modern, outward-facing “frontside” and a backward, agrarian “backside,” a schema later projected onto the empire after 1931. In this image, the Japanese soldier occupies the central and dominant position, embodying the “frontside” of industrial modernity and military power. The civilians and livestock above him represent a protected but dependent sphere of agrarian productivity in the occupied regions: life sustained through benevolent guidance rather than autonomous agency. Chiang Kai-shek, positioned at the bottom, signifies not merely a political adversary but an obstacle to developmental progression itself, a figure whose removal enables the upward flow of history. At the apex, the radiant sun functions as a non-human, cosmological authority that sanctifies the entire arrangement. Importantly, the sun is not only a national emblem but a naturalized cosmic body, transforming the political hierarchy below into something presented as inevitable and organic.</p><p class="en">This is the mechanism of productive ambiguity in its most condensed form. The image does not require the child viewer to reconcile the contradiction between the soldier’s destructive capacity and his protective posture. Instead, it fuses both into a single moral narrative in which coercion and care become indistinguishable expressions of the same benevolent mission. Domination is reframed as protection, conquest as developmental assistance, and hierarchy as natural order. The presence of livestock anchors this abstraction in the material realities of rural life, translating ideological promise into tangible well-being: food, stability, survival, and continuation of community.</p> <p class="en">The ultimate message is therefore clear: Japanese and Chinese children, reading the same pages and inhabiting the same visual system, are positioned, at different points along a single diagonal trajectory, within a shared but fundamentally hierarchical vision of a Pan-Asian future.</p>
+          <p class="zh">本宣传画在视觉上从根本展现了我们所分析的意识形态。其构图将“解放”与“等级秩序”的二元冲突简化为一条沿对角线展开的四层结构。该对角线本身即构成图像的核心逻辑：它将世界组织为一个递进的等级序列：底部为失败与排除，中层为保护与重建，上层为感恩与繁荣，而最顶端则为超越性的、普遍化的“绝对正当性”。无论是日本儿童还是中国儿童，都并未被引导质疑这一结构，而是被要求在其中寻找并确认自身的位置。</p><p class="zh">值得注意的是，该图像并未将日本呈现为中国的征服者，而是将其描绘为南京国民政府的反对者，该政权被认定为中国人民进入日本主导的亚洲秩序之阻碍。五色旗在这一叙事中起到关键作用：通过挪用蒋介石上台前中华民国早期的国家旗帜，日本将自身定义为中国主权的“恢复者”，而非其对立。在这一意义上，反殖民解放的话语被吸收并重新导向：敌人并非作为整体的中国民族，而是被认定为阻碍中国解放自身的蒋介石政权。这一视觉逻辑体现了“大东亚共荣圈”是如何将自身呈现为一种对抗西方的合法秩序并使亚洲国家在日本领导下“解放”。士兵的姿态印证了这一点：具有保护与支配的双重含义，且在视觉语言上无法加以区分。</p><p class="zh">对角线的四层结构同样隐含了日本空间想象中的发展等级秩序：日本将其领土构想为一种发展有别的梯度场：面向现代化的“前侧”与相对滞后的农业“后侧”，而这一逻辑在1931年后被投射至亚洲之中。在该图景中，日本士兵占据中心且最具支配性的地位，象征工业现代性与军事力量构成的“前侧”。士兵上方的民众与牲畜则代表着受保护但被支配的的农业生产，其生存依赖于外部庇护，而非自主性发展的后侧。位于底部的蒋介石不仅是敌人，更是亚洲发展进程中的阻碍。而在最顶端，放射状的太阳作为普世权威，将阶层重整为神圣且自然的秩序。</p><p class="zh"> 该海报极好的展现了“生产性模糊”。作者并不奢望观者调和暴力与保护之间的矛盾，而将二者整合为同一道德叙事中的不同表达。支配被表述为保护，征服被表述为援助，而等级则被表述为自然秩序。牲畜的图像进一步将抽象的意识形态承诺锚定于具体的乡村生活体验之中，将其转化为可感知的现实利益：食物、稳定、生存与共同体的延续</p><p class="zh">其传达的信息十分明确：日本与中国儿童阅读同一文本，处于同一视觉体系之中，并在同一对角线的不同位置上，被引导进入一个共享但本质上充满压迫的泛亚想象</p>
+        </div>
+        <div class="modal-src"><a href="https://www.dhi.ac.uk/chiangkaishek/artwork/10/" target="_blank">↗ View at DHI / AHRC Archive</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- M4 -->
+<div class="modal-overlay" id="m4" onclick="bgClose(event,this)">
+  <div class="modal"><button class="modal-close" onclick="closeModal(&#39;m4&#39;)">✕</button>
+    <div class="modal-grid">
+      <div class="modal-img"><img src="images/Poster4.jpg" alt="Drive Out the English"><span class="modal-img-credit">NAM. 2000-06-163-1 · National Army Museum, London</span></div>
+      <div class="modal-text">
+        <div class="modal-ex">Exhibit 04 / 04</div>
+        <h2 class="modal-title en">"This Is an Apt Occasion to Drive Out the English from Asia"</h2>
+        <h2 class="modal-title zh">「將英國人趕出亞洲之大好時機」</h2>
+        <div class="modal-meta en">1944 · Burma Theater · National Army Museum, London · Accession NAM. 2000-06-163-1 · Out of Copyright</div>
+        <div class="modal-meta zh">1944年 · 缅甸战区 · 英国国家陆军博物馆 · 馆藏号 NAM. 2000-06-163-1</div>
+        <div class="modal-tags"><span class="tag tgold"><span class="en-i">ANTI-COLONIAL APPROPRIATION</span><span class="zh-i">反殖民挪用</span></span><span class="tag tred"><span class="en-i">Pan-Asian Tableau</span><span class="zh-i">泛亚图景</span></span><span class="tag trust"><span class="en-i">Cartographic Rhetoric</span><span class="zh-i">视觉隐喻</span></span></div>
+ 
+        <div class="desc-block">
+          <h4><span class="en-i">What Is Depicted</span><span class="zh-i">图像描述</span></h4>
+          <p class="en">This 1944 propaganda leaflet employs a stark vertical binary to construct its argument. The composition is divided into two opposed zones. The upper zone depicts five Asian men seated in a row atop an enormous globe, their legs dangling comfortably over its curve, their arms raised in a synchronized toast. Their clothing is deliberately varied: turbans, traditional South Asian garments, Southeast Asian attire, Chinese clothing, and one brown Japanese military uniform, marking them as representatives of distinct Asian peoples united in a single celebratory gesture. The globe beneath them is rendered in green and blue, signifying the Asian landmass and the surrounding seas now under their collective stewardship. The lower zone contains a single figure: an older British man in dark clothing, tumbling backward and downward beneath the globe. Patches on the Union Jack, spilling coins, and a startled, collapsing expression identify him as British imperial power in the moment of its expulsion. The motion of his fall intensifies the sense of violent overthrow. The leaflet's multilingual text, rendered in South Asian scripts across the top, translates to: "This is an apt occasion to drive out the English from Asia." The visual structure is clear: Asia above, Britain below; unity above, isolation below; celebration above, ruin below; new order above, old hierarchy below.</p>
+          <p class="zh">这份1944年的宣传传单运用鲜明的上下结构来传递信息。画面被划分为两个对立区域。上方区域描绘了五名亚洲男性并排坐于一尊地球仪之上，双腿自在地悬垂于球体弧线之外，手臂高举，同步祝酒。他们的服饰不同：头巾、南亚传统服装、东南亚装束，中国马褂，以及一套棕色日本军装，以此标识他们作为不同亚洲族群的代表，团结于同一个庆祝动作之中。他们身下的地球仪画面聚焦于亚洲大陆及其周边海域，其此刻已处于他们的集体管理之下。下方区域仅有一人：一名身着深色服装的年长英国男性，在地球仪下方仰面跌落。联合王国国旗的补丁、倾洒而出的钱币，以及一张惊愕、崩溃的面容，标志着联合王国在亚洲的失败与出局。其坠落的动作强化了暴力的观感。传单上方有着南亚文字印刷的多语种文本，据信翻译为："此乃將英國人趕出亞洲之大好時機。"该图视觉结构与其预期所传递的信息十分清晰：亚洲在上，英国在下；团结在上，孤立在下；庆祝在上，废墟在下；新秩序在上，旧等级在下。</p>
+        </div>
+ 
+        <div class="desc-block">
+          <h4><span class="en-i">Audience &amp; Purpose</span><span class="zh-i">受众与目的</span></h4>
+          <p class="en">The leaflet's multilingual format, employing South Asian scripts rather than Japanese or Chinese characters, identifies its primary audience of the colonized populations of British India. This was a tactical instrument of psychological warfare aimed at undermining British colonial authority by appealing directly to Indian anti-colonial sentiment and redirecting it toward a Japanese-led vision of Asian solidarity. The message is constructed through a series of visual elements that require no textual mediation to grasp. Five Asian figures representing distinct ethnic and religious communities sit together as equals, their synchronized toast performing a unity that transcends the very divisions British colonial policy had cultivated. The absence of any Japanese flag or imperial insignia emphasizes the singular message of anti-British solidarity, allowing Pan-Asianism to appear as an Asian truth instead of an Japanese imeprial project. The British figure at the bottom is rendered as both morally corrupt and physically unstable: the spilling coins associate him with colonial exploitation, while his collapsing posture suggests that British power is already disintegrating. The globe upon which the Asian figures sit presents Asia as Asian property, a geopolitical order from which the European colonizer has been defeated and expelled. Moreover, The leaflet presents a future that appears already accomplished. The British are not being asked to leave but have already toppled violently, and the viewer is being invited to join the celebration of a fait accompli, to claim membership in a Pan-Asian community that has already seized its liberation.</p>
+          <p class="zh">该传单使用了南亚文字，从而精确地标识了其首要受众：英属印度的被殖民人口。这是一件心理战工具，旨在通过诉诸印度反殖民情绪并将其导向日本领导的泛亚愿景，来削弱英国殖民权威。信息通过一系列无需文字领会的视觉元素传达。五名代表不同族群的亚洲人物平等并坐，其同步的祝酒动作展演着泛亚主义的承诺：一个超越人为构建的分裂而团结如一的大陆。日本士兵被并未被描绘成指挥官，而是参与者。其权威弥散于集体之中，被展现为反帝事业中的协作者与解放者。日本国旗或帝国标记的缺席凸显了反英团结这一信息，将泛亚主义呈现为亚洲普世的真理而非帝国野心的造物。底部的英国人物形象道德上腐败且实际上摇摇欲坠：倾洒的钱币将其与殖民剥削联系在一起，而崩溃的姿态则暗示英国的霸权已然分崩离析。亚洲人物身下的地球将亚洲展现为为亚洲的财产，一种欧洲殖民者不仅已被击败、驱逐的地缘政治秩序。传单呈现了一个仿佛业已完成的未来：英国人并非正在被礼貌地要求离开；他们已经坠落。而观者正被邀请加入对一个既定事实的庆祝，去认领一个已然夺取自身解放的泛亚共同体中的成员资格。</p>
+        </div>
+ 
+        <div class="modal-body">
+          <p class="en">This leaflet represents the most geopolitically ambitious expression of the duality examined in this project. Whereas earlier images addressed domestic Japanese children or mixed audiences, this composition speaks directly to colonized Asians, suppressing nearly every overt marker of Japanese imperial authority. That suppression is itself the clearest evidence of the mechanism under study: propaganda secures consent not by openly asserting Japanese superiority, but by constructing a framework in which Japanese leadership appears as the natural expression of shared Asian interests.</p> <p class="en">The globe supporting five seated figures visualizes a post-Western order in which Asians collectively govern their own affairs. Every visual element frames the war as a common Asian struggle for liberation, while the political structure that would replace British rule remains deliberately undefined. Yet traces of what Imperial Japan sought to conceal remain visible. The Japanese soldier sits among apparent equals, but his uniform distinguishes him as the sole bearer of organized military force. Hierarchy is therefore not imposed overtly from above, but embedded within the very concept of Asian unity, which requires military leadership and, by implication, requires Japan.</p> <p class="en">The vertical axis of the composition is not only political but developmental. Asia occupies the upper register as the site of legitimate world order, while the British figure is expelled downward into a superseded historical epoch, accompanied by spilled pounds that associate British imperialism with extractive colonial economics. The leaflet thus presents a vision of a post-extractive Asia that has overcome developmental subordination and realized the promise of “Asia for Asiatics.” Yet the Japanese uniform within the group quietly ensures that the new order remains structured: someone must provide the force that makes celebration possible, and that someone is Japan. The soldier signifies the actor who has already arrived at modernity and now sits among those still approaching it; his uniform becomes the discreet emblem of leadership that requires no flag.</p> <p class="en">Productive ambiguity operates here at a geopolitical scale. The leaflet presents a vision of Asian unity that is simultaneously horizontal and vertical. Horizontally, five figures sit together as equals. Vertically, however, the composition imposes an order in which the Japanese soldier is both participant and protector, both equal and leader. The image offers no visual language for questioning this dual role, because it is presented as the natural condition of Asian solidarity itself. The British figure below functions as the essential negative that makes the positive vision coherent: his expulsion is the founding act of the new order and the violence that establishes the peace above. By portraying his fall as already accomplished, the leaflet transforms ongoing war into retrospective celebration and invites the Indian viewer to join not a struggle, but a victory. The multilingual address completes this apparatus: in being hailed as Indian, the viewer is simultaneously hailed as Asian, and both identities are made to appear not as political constructions, but as natural facts long suppressed by British imperialism and now restored through Japanese-led Pan-Asianism.</p>
+          <p class="zh">这张传单体现了本研究所讨论的二元机制在地缘政治层面上最具野心的表达。相较于此前主要面向日本国内儿童或混合受众的宣传图像，这一作品的对象明确指向殖民统治下的亚洲人民，并有意淡化几乎所有可被直接识别的日本帝国权力标志。正是这种刻意的隐匿，构成了所研究机制最清晰的证据：宣传并非通过公开强调日本的优越地位来取得认同，而是通过建构一种话语框架，使日本领导地位被理解为亚洲共同利益的自然体现。</p> <p class="zh">画面中央承载五位人物的地球，象征着一个摆脱西方支配后的新秩序，在这一秩序中，亚洲人民似乎能够共同主宰自身事务。图像中的各项元素都将战争塑造为亚洲整体的解放事业，而英国统治之后将由何种政治结构取而代之，则被有意保持模糊。然而，日本试图隐藏的权力痕迹仍然清晰可见。坐在众人之间的日本士兵表面上只是其中一员，但其军装使其成为画面中唯一明确代表组织化武力的人物。等级关系因此并非自上而下地直接施加，而是被嵌入“亚洲团结”这一概念本身之中：团结需要军事领导，而军事领导意味着日本的不可或缺。</p> <p class="zh">这一构图中的垂直轴线不仅具有政治含义，也承载着发展层级的想象。位于上方的亚洲群像象征合法的新世界秩序，而下坠的英国人物则被抛入一个已经过时的历史阶段。其四散的英镑进一步将英国帝国主义与掠夺性的殖民经济联系在一起。由此，传单描绘出一个摆脱资源抽取与发展依附的“后殖民亚洲”，仿佛“亚洲归亚洲人”这一口号终于得以实现。然而，群像中的日本军装又悄然确保了这一新秩序并非真正平等：必须有人提供使庆祝得以成立的军事力量，而这一角色正由日本承担。日本士兵象征着那个已率先抵达现代性的主体，并坐在仍处于追赶过程中的亚洲人民之间；其军装本身，便是无需旗帜也能被识别的领导标记。</p> <p class="en">“生产性模糊性”在此以地缘政治尺度得到充分展现。画面所呈现的亚洲团结同时具有横向与纵向两种结构。横向上，五位人物并肩而坐，似乎彼此平等；纵向上，整体构图却安排出一种秩序，使日本士兵同时成为参与者与保护者、同伴与领导者。图像并未提供任何质疑这一双重角色的视觉语言，因为它将此呈现为亚洲团结本身的自然状态。下方坠落的英国人物则是这一正面愿景得以成立所必需的负面对象：对其驱逐构成新秩序的奠基性时刻，是以暴力建立和平的象征行为。通过将英国的失败描绘为既成事实，这张传单把仍在进行中的战争转化为事后的胜利庆典，并邀请印度观者加入的不是一场斗争，而是一场似乎已经完成的胜利。多语种文字则完成了这一宣传装置的最后环节：观者在被召唤为“印度人”的同时，也被召唤为“亚洲人”；这两种身份被呈现为自然存在，而非政治建构，仿佛只是长期遭受英国帝国主义压制，如今才在日本主导的泛亚主义之下重新获得恢复。</p>
+        </div>
+        <div class="modal-src"><a href="https://collection.nam.ac.uk/detail.php?acc=2000-06-163-1" target="_blank">↗ View at National Army Museum</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function setLang(lang){
+  document.body.className='lang-'+lang;
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelector('.lang-btn[onclick="setLang(\''+lang+'\')"]').classList.add('active');
+  document.documentElement.lang=lang==='zh'?'zh':'en';
+}
+function openModal(id){document.getElementById(id).classList.add('open');document.body.style.overflow='hidden';}
+function closeModal(id){document.getElementById(id).classList.remove('open');document.body.style.overflow='';}
+function bgClose(e,overlay){if(e.target===overlay){overlay.classList.remove('open');document.body.style.overflow='';}}
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape')document.querySelectorAll('.modal-overlay.open').forEach(m=>{m.classList.remove('open');document.body.style.overflow='';});
+});
+</script>
